@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import './App.css'
+import LoginPage from './Pages/LoginPage'
 
 function App() {
   return (
     <>
-    <h1>GCTU STUDENT INTERNSHIP SYSTEM</h1>
+    <LoginPage/>
     </>
   )
 }

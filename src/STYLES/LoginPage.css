@@ -1,0 +1,36 @@
+.containerMain {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url("../assets/gctu-gate-1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.formContainer {
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin-top: 250px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.logoImage {
+  width: 400px;
+  height: 90px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.copyrightFooter {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
