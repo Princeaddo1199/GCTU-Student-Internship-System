@@ -31,7 +31,7 @@ const customStyles = {
     ...provided,
     width: 350,
     minHeight: 40,
-    height: 40,
+    height: 45,
     backgroundColor: "#f3f5f7",
     boxShadow: "none",
     border: "1px solid #ccc",
@@ -68,12 +68,13 @@ export default function LoginPage() {
       <div className="formContainer">
         <img className="logoImage" src={logoImage} alt="Logo image" />
         <h3 style={{ marginTop: "10px", color: "#11325f" }}>
-          Student Internship System (SIS)
+          Student Internship System
         </h3>
+        <h3 style={{ marginTop: "10px", color: "#11325f" }}>(SIS)</h3>
         <p
           style={{
             fontSize: "13px",
-            fontWeight: "500",
+            fontWeight: "600",
             margin: "10px 0",
             color: "#4b6b9c",
           }}
@@ -82,7 +83,13 @@ export default function LoginPage() {
         </p>
         <div>
           <p
-            style={{ marginTop: "10px", marginBottom: "5px", fontSize: "14px" }}
+            style={{
+              marginTop: "10px",
+              marginBottom: "5px",
+              fontSize: "13px",
+              fontWeight: "600",
+              color: "#4d4c4c",
+            }}
           >
             Select role
           </p>
@@ -90,6 +97,7 @@ export default function LoginPage() {
             options={options}
             styles={customStyles}
             components={{ Option }}
+            defaultValue={options[1]}
           />
         </div>
         <div style={{ marginTop: "20px" }}>
@@ -97,7 +105,9 @@ export default function LoginPage() {
             style={{
               margingleft: "45px",
               marginBottom: "5px",
-              fontSize: "14px",
+              fontSize: "13px",
+              fontWeight: "600",
+              color: "#4d4c4c",
             }}
           >
             Email address
@@ -112,15 +122,33 @@ export default function LoginPage() {
           </div>
         </div>
         <div style={{ marginTop: "20px" }}>
-          <p
-            style={{
-              margingleft: "45px",
-              marginBottom: "5px",
-              fontSize: "14px",
-            }}
-          >
-            Password
-          </p>
+          <div className="passwordSection">
+            <p
+              style={{
+                margingleft: "45px",
+                marginBottom: "5px",
+                fontSize: "13px",
+                fontWeight: "600",
+                color: "#4d4c4c",
+              }}
+            >
+              Password
+            </p>
+            <span
+              role="button"
+              onClick={() => alert("Forgot password logic")}
+              style={{
+                color: "#4b6b9c",
+                cursor: "pointer",
+                fontSize: "12px",
+                fontWeight: "600",
+                display: "inline-block",
+                marginTop: "4px",
+              }}
+            >
+              Forgot Password?
+            </span>
+          </div>
           <div className="emailInputContainer">
             <Lock size={18} className="emailIcon" />
             <input
@@ -128,6 +156,34 @@ export default function LoginPage() {
               placeholder="**********"
               className="textInput"
             />
+          </div>
+        </div>
+        <div>
+          <button
+            type="button"
+            onClick={() => alert("Login logic")}
+            className="signInButton"
+          >
+            Sign In
+          </button>
+        </div>
+        <div className="requestAccount">
+          <div>
+            <span style={{ fontSize: "12px" }}>New supervisor? </span>
+            <span
+              role="button"
+              onClick={() => alert("request account logic")}
+              style={{
+                color: "#4b6b9c",
+                cursor: "pointer",
+                fontSize: "12px",
+                fontWeight: "600",
+                display: "inline-block",
+                marginTop: "4px",
+              }}
+            >
+              Forgot Password?
+            </span>
           </div>
         </div>
       </div>

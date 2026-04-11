@@ -20,7 +20,10 @@
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   margin-top: 250px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    -3px 0px 5px rgba(0, 0, 0, 0.2),
+    3px 0px 5px rgba(0, 0, 0, 0.2),
+    0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 .logoImage {
   width: 400px;
@@ -70,7 +73,7 @@
   color: #979899;
   flex-shrink: 0;
 }
-.roleSelection {
+/* .roleSelection {
   width: 350px;
   height: 40px;
   margin-top: 10px;
@@ -80,9 +83,28 @@
   font-size: 16px;
   cursor: pointer;
   background-color: #f3f5f7;
-}
+} */
 
-.roleSelection:focus {
+/* .roleSelection:focus {
   outline: none;
   border-color: #b3b2b2;
+} */
+.passwordSection {
+  display: flex;
+  justify-content: space-between;
+}
+.signInButton {
+  width: 350px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(to right, #1d3989, #21273b);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.requestAccount {
+  margin-top: 20px;
 }
