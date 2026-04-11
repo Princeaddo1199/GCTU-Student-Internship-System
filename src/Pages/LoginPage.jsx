@@ -2,6 +2,7 @@ import logoImage from "../assets/gctu-logo.png";
 import "../STYLES/LoginPage.css";
 import Select, { components } from "react-select";
 import { Check, Mail, Lock } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const options = [
   { value: "Student / Intern", label: "Student / Intern" },
@@ -63,6 +64,8 @@ const customStyles = {
   }),
 };
 export default function LoginPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="containerMain">
       <div className="formContainer">
@@ -161,7 +164,7 @@ export default function LoginPage() {
         <div>
           <button
             type="button"
-            onClick={() => alert("Login logic")}
+            onClick={() => navigate("/dashboard")}
             className="signInButton"
           >
             Sign In
