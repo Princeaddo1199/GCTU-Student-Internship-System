@@ -1,0 +1,64 @@
+.mainSearchbarContainer {
+  background-color: rgb(255, 255, 255);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5px solid #e0e5eb;
+  box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+}
+.searchbarContainer {
+  display: flex;
+  align-items: center;
+  background-color: #f3f5f7;
+  height: 40px;
+  width: 500px;
+  border: 0.5px solid #e0e5eb;
+  border-radius: 5px;
+  /* margin-right: 20px; */
+}
+.sideBarToggle {
+  margin: 0 40px;
+}
+.searchbar input {
+  border: none;
+  background-color: #f3f5f7;
+  padding: 10px;
+}
+.searchbar input::placeholder {
+  color: #8894a2;
+  font-size: 16px;
+}
+.searchbar input:focus {
+  outline: none;
+}
+.settings {
+  margin: 0 30px;
+}
+.selectLanguage {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.messages {
+  margin-right: 30px;
+}
+.notifications {
+  margin-right: 30px;
+}
+.searchbarProfile{
+    display: flex;
+    align-items: center;
+
+}
+.profileIcon{
+    width: 40px;
+    height: 40px;
+    background-color: #11325f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}

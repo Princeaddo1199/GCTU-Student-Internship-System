@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import Logo from "../assets/gctu-logo-1.png";
 import "../STYLES/Sidebar.css";
 import { ChevronRight, LayoutDashboard, Briefcase } from "lucide-react";
 
@@ -12,6 +13,10 @@ export default function Sidebar() {
 
   return (
     <div className="sidebarLayoutMain">
+      <div className="logo">
+        <img src={Logo} alt="GCTU Logo" width="40" height="40" />
+        <p>GCTU SIS</p>
+      </div>
       <nav className="sidebarNav">
         <NavLink to="/dashboard" className="navLink">
           <LayoutDashboard className="navIcon" />

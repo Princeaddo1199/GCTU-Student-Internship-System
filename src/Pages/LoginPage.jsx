@@ -5,7 +5,6 @@ import { Check, Mail, Lock } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const options = [
-  { value: "Student / Intern", label: "Student / Intern" },
   { value: "Administrator", label: "Administrator" },
   { value: "Academic Supervisor", label: "Academic Supervisor" },
   { value: "Industry Supervisor", label: "Industry Supervisor" },

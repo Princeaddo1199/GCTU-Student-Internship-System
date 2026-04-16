@@ -7,13 +7,15 @@ import Dashboard from "./Pages/Dashboard";
 import InternshipDetails from "./Pages/InternshipDetails";
 import PlacementInformation from "./Pages/PlacementInformation";
 import InternshipGuidelines from "./Pages/InternshipGuidelines";
+import Searchbar from "./Components/Searchbar";
 
 function MainLayout({ children }) {
   return (
     <div className="mainLayout">
       <Sidebar />
       <main className="mainContent" style={{ flex: 1 }}>
-        {children}
+        <Searchbar />
+      {children}
       </main>
     </div>
   );
