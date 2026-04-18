@@ -4,9 +4,19 @@ import Sidebar from "./Components/Sidebar";
 import LoginPage from "./Pages/LoginPage";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard";
-import InternshipDetails from "./Pages/InternshipDetails";
-import PlacementInformation from "./Pages/PlacementInformation";
-import InternshipGuidelines from "./Pages/InternshipGuidelines";
+import RecordVisitReport from "./Pages/RecordVisitReport";
+import VisitHistory from "./Pages/VisitHistory";
+import MyStudents from "./Pages/MyStudents";
+import InternshipMonitoring from "./Pages/InternshipMonitoring";
+import LogbookManagement from "./Pages/LogbookManagement";
+import AttendanceMonitoring from "./Pages/AttendanceMonitoring";
+import PerformanceEvaluation from "./Pages/PerformanceEvaluation";
+import SupervisorFeedback from "./Pages/SupervisorFeedback";
+import IndustryReports from "./Pages/IndustryReports";
+import Messages from "./Pages/Messages";
+import Notifications from "./Pages/Notifications";
+import ReportsAnalysis from "./Pages/ReportsAnalysis";
+import Profile from "./Pages/Profile";
 import Searchbar from "./Components/Searchbar";
 
 function MainLayout({ children }) {
@@ -15,7 +25,7 @@ function MainLayout({ children }) {
       <Sidebar />
       <main className="mainContent" style={{ flex: 1 }}>
         <Searchbar />
-      {children}
+        {children}
       </main>
     </div>
   );
@@ -35,26 +45,106 @@ function App() {
         }
       />
       <Route
-        path="/internship-details"
+        path="/my-students"
         element={
           <MainLayout>
-            <InternshipDetails />
+            <MyStudents />
           </MainLayout>
         }
       />
       <Route
-        path="/placement-information"
+        path="/internship-monitoring"
         element={
           <MainLayout>
-            <PlacementInformation />
+            <InternshipMonitoring />
           </MainLayout>
         }
       />
       <Route
-        path="/internship-guidelines"
+        path="/logbook-management"
         element={
           <MainLayout>
-            <InternshipGuidelines />
+            <LogbookManagement />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/attendance-monitoring"
+        element={
+          <MainLayout>
+            <AttendanceMonitoring />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/performance-evaluation"
+        element={
+          <MainLayout>
+            <PerformanceEvaluation />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/supervisor-feedback"
+        element={
+          <MainLayout>
+            <SupervisorFeedback />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/industry-reports"
+        element={
+          <MainLayout>
+            <IndustryReports />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/record-visit-report"
+        element={
+          <MainLayout>
+            <RecordVisitReport />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/visit-history"
+        element={
+          <MainLayout>
+            <VisitHistory />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/messages"
+        element={
+          <MainLayout>
+            <Messages />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/notifications"
+        element={
+          <MainLayout>
+            <Notifications />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/reports-analysis"
+        element={
+          <MainLayout>
+            <ReportsAnalysis />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <MainLayout>
+            <Profile />
           </MainLayout>
         }
       />
