@@ -1,20 +1,39 @@
 .dashboardTitle {
-    margin: 40px;
+  margin: 40px;
 }
-.dashboardTitleMain{
-    margin-bottom: 10px;
-    font-size: 28px;
-    font-weight: 700;
+.dashboardTitleMain {
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
 }
-.dashboardTitleSub{
-    font-size: 14px;
-    font-weight: 500;
-    color: #8894a2;
+.dashboardTitleSub {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8894a2;
 }
 .dashboard-cards {
+  display: flex;
+  flex: 1;
+}
+.tableBarContainer{
     display: flex;
-    flex: 1;
-    /* flex-wrap: wrap; */
-    /* gap: 20px; */
-    /* margin: 40px; */
+    /* margin-top: 30px; */
+}
+.studentsTableContainer{
+    width: 800px;
+    margin-left: 40px;
+    height: fit-content;
+    padding: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #e0e5eb ;
+}
+.progressTrendContainer{
+    width: 440px;
+    margin-left: 40px;
+    height: fit-content;
+    padding: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #e0e5eb ;
 }

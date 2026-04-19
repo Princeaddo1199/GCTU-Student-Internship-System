@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "student": "Jane Mensah",
+    "company": "TechCorp Ghana",
+    "progress": 68,
+    "lastLog": "Mar 12",
+    "risk": "OK"
+  },
+  {
+    "id": 2,
+    "student": "Kofi Adjei",
+    "company": "DataFlow Inc",
+    "progress": 55,
+    "lastLog": "Mar 11",
+    "risk": "OK"
+  },
+  {
+    "id": 3,
+    "student": "Abena Owusu",
+    "company": "InnoTech Ltd",
+    "progress": 30,
+    "lastLog": "Mar 3",
+    "risk": "At Risk"
+  },
+  {
+    "id": 4,
+    "student": "Yaw Mensah",
+    "company": "CloudBase Co",
+    "progress": 82,
+    "lastLog": "Mar 12",
+    "risk": "OK"
+  },
+  {
+    "id": 5,
+    "student": "Kwame Asante",
+    "company": "DevSolutions GH",
+    "progress": 47,
+    "lastLog": "Mar 10",
+    "risk": "At Risk"
+  },
+  {
+    "id": 6,
+    "student": "Efua Boateng",
+    "company": "NextGen Systems",
+    "progress": 74,
+    "lastLog": "Mar 14",
+    "risk": "OK"
+  },
+  {
+    "id": 7,
+    "student": "Kojo Annan",
+    "company": "BlueTech Africa",
+    "progress": 61,
+    "lastLog": "Mar 13",
+    "risk": "OK"
+  },
+  {
+    "id": 8,
+    "student": "Ama Serwaa",
+    "company": "SmartApps Ltd",
+    "progress": 28,
+    "lastLog": "Mar 5",
+    "risk": "At Risk"
+  },
+  {
+    "id": 9,
+    "student": "Daniel Ofori",
+    "company": "CodeWorks Inc",
+    "progress": 90,
+    "lastLog": "Mar 15",
+    "risk": "OK"
+  },
+  {
+    "id": 10,
+    "student": "Akosua Nyamekye",
+    "company": "InnovateX",
+    "progress": 53,
+    "lastLog": "Mar 11",
+    "risk": "OK"
+  },
+  {
+    "id": 11,
+    "student": "Samuel Tetteh",
+    "company": "FutureSoft",
+    "progress": 39,
+    "lastLog": "Mar 8",
+    "risk": "At Risk"
+  },
+  {
+    "id": 12,
+    "student": "Nana Yaa Frimpong",
+    "company": "AlphaTech Solutions",
+    "progress": 77,
+    "lastLog": "Mar 14",
+    "risk": "OK"
+  },
+  {
+    "id": 13,
+    "student": "Emmanuel Mensima",
+    "company": "ByteLabs",
+    "progress": 64,
+    "lastLog": "Mar 13",
+    "risk": "OK"
+  },
+  {
+    "id": 14,
+    "student": "Linda Agyapong",
+    "company": "TechNova",
+    "progress": 22,
+    "lastLog": "Mar 4",
+    "risk": "At Risk"
+  },
+  {
+    "id": 15,
+    "student": "Isaac Owusu",
+    "company": "CloudNet Africa",
+    "progress": 85,
+    "lastLog": "Mar 15",
+    "risk": "OK"
+  }
+]
