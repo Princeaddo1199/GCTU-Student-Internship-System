@@ -1,5 +1,5 @@
 .dashboardTitle {
-  margin: 40px;
+  margin: 20px 40px 0px 40px;
 }
 .dashboardTitleMain {
   margin-bottom: 10px;
@@ -20,7 +20,7 @@
     /* margin-top: 30px; */
 }
 .studentsTableContainer{
-    width: 800px;
+    width: 1000px;
     margin-left: 40px;
     height: fit-content;
     padding: 30px;
@@ -29,7 +29,17 @@
     border: 1px solid #e0e5eb ;
 }
 .progressTrendContainer{
-    width: 440px;
+    width: 430px;
+    margin-left: 40px;
+    height: fit-content;
+    padding: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #e0e5eb ;
+}
+.upcomingVisitsContainer{
+    width: 430px;
+    margin-top: 40px;
     margin-left: 40px;
     height: fit-content;
     padding: 30px;

@@ -1,15 +1,60 @@
 import React from "react";
 import BigCard from "../Components/BigCard";
-import { Building2, CalendarCheck, TriangleAlert, Users } from "lucide-react";
+import { Building2, Calendar, CalendarCheck, TriangleAlert, Users } from "lucide-react";
 import students from "../Data/studentTable.json";
 import { DataGrid } from "@mui/x-data-grid";
+import { Box, LinearProgress, Typography } from "@mui/material";
 import "../STYLES/Dashboard.css";
+import Chart from "../Components/Chart";
 
 const columns = [
   { field: "student", headerName: "Student", width: 250 },
   { field: "company", headerName: "Company", width: 200 },
-  { field: "progress", headerName: "Progress", width: 110 },
-  { field: "lastLog", headerName: "Last Log", width: 160 },
+  {
+    field: "progress",
+    headerName: "Progress",
+    width: 200,
+    sortable: true,
+    renderCell: (params) => {
+      const raw = params?.value;
+      const value =
+        typeof raw === "number" && Number.isFinite(raw)
+          ? Math.min(100, Math.max(0, raw))
+          : 0;
+
+      return (
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            paddingRight: "20px",
+            gap: 1,
+          }}
+        >
+          <LinearProgress
+            variant="determinate"
+            value={value}
+            sx={{
+              flex: 1,
+              height: 8,
+              borderRadius: 999,
+              backgroundColor: "#e9edf3",
+              "& .MuiLinearProgress-bar": {
+                borderRadius: 999,
+                backgroundColor:
+                  value >= 70 ? "#22c55e" : value >= 40 ? "#f59e0b" : "#ef4444",
+              },
+            }}
+          />
+          <Typography variant="body2" sx={{ minWidth: 36 }}>
+            {value}%
+          </Typography>
+        </Box>
+      );
+    },
+  },
+  { field: "lastLog", headerName: "Last Log", width: 200 },
   { field: "risk", headerName: "risk", width: 200 },
 ];
 export default function Dashboard() {
@@ -62,6 +107,11 @@ export default function Dashboard() {
           <DataGrid
             rows={students}
             columns={columns}
+            sx={{
+              "& .MuiDataGrid-columnSeparator": {
+                display: "none",
+              },
+            }}
             initialState={{
               pagination: {
                 paginationModel: { pageSize: 5 },
@@ -71,8 +121,29 @@ export default function Dashboard() {
             pagination
           />
         </div>
+        <div>
         <div className="progressTrendContainer">
           <p style={{fontWeight: "bold", fontSize: "20px", marginBottom: "10px"}}>Avg. Progress Bar</p>
+          <Chart />
+        </div>
+        <div className="upcomingVisitsContainer">
+          <p
+            style={{
+              fontWeight: "bold",
+              fontSize: "20px",
+              marginBottom: "10px",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
+          >
+            <Calendar size={20} color="#8894a2" />
+            Upcoming Visits
+          </p>
+          <div>
+          visit cards go here
+          </div>
+        </div>
         </div>
       </div>
     </div>

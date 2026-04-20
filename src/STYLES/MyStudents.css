@@ -1,0 +1,64 @@
+.myStudentsPage {
+  padding: 24px 40px;
+}
+
+.myStudentsHeader h2 {
+  margin: 0 0 6px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.myStudentsHeader p {
+  margin: 0 0 18px 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #8894a2;
+}
+
+.myStudentsSearchRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: min(520px, 100%);
+  margin-bottom: 16px;
+}
+
+.myStudentsSearchRow input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  background: transparent;
+}
+
+.myStudentsTableCard {
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.statusActive {
+  background: #eef2f7;
+  color: #1f2937;
+}
+
+.statusAtRisk {
+  background: #ef4444;
+  color: #ffffff;
+}
+
