@@ -1,0 +1,62 @@
+.internshipMonitoringTitle {
+    padding: 20px 40px 0px 40px;
+  }
+  .internshipMonitoringTitleMain {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .internshipMonitoringTitleSub {
+    font-size: 14px;
+    font-weight: 500;
+    color: #8894a2;
+  }
+
+.internshipMonitoringTabs{
+  margin: 14px 40px 0px 40px;
+  display: flex;
+  gap: 10px;
+}
+
+.tabButton{
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #e0e5eb;
+  background-color: #ffffff;
+  color: #1b222d;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tabButton.active{
+  background-color: #11325f;
+  border-color: #11325f;
+  color: #ffffff;
+}
+
+.internshipMonitoringOther{
+  margin: 20px 40px 20px 40px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+}
+
+.internshipMonitoringOtherTitle{
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.internshipMonitoringOtherSub{
+  margin: 0;
+  font-size: 14px;
+  color: #8894a2;
+}
+
+.internshipMonitoringCards{
+  margin: 20px 40px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

@@ -5,7 +5,10 @@
     "company": "TechCorp Ghana",
     "progress": 68,
     "lastLog": "Mar 12",
-    "risk": "OK"
+    "risk": "OK",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 2,
@@ -13,7 +16,10 @@
     "company": "DataFlow Inc",
     "progress": 55,
     "lastLog": "Mar 11",
-    "risk": "OK"
+    "risk": "OK",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 3,
@@ -21,7 +27,10 @@
     "company": "InnoTech Ltd",
     "progress": 30,
     "lastLog": "Mar 3",
-    "risk": "At Risk"
+    "risk": "At Risk",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 4,
@@ -29,7 +38,10 @@
     "company": "CloudBase Co",
     "progress": 82,
     "lastLog": "Mar 12",
-    "risk": "OK"
+    "risk": "OK",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 5,
@@ -37,7 +49,10 @@
     "company": "DevSolutions GH",
     "progress": 47,
     "lastLog": "Mar 10",
-    "risk": "At Risk"
+    "risk": "At Risk",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 6,
@@ -45,7 +60,10 @@
     "company": "NextGen Systems",
     "progress": 74,
     "lastLog": "Mar 14",
-    "risk": "OK"
+    "risk": "OK",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 7,
@@ -53,7 +71,10 @@
     "company": "BlueTech Africa",
     "progress": 61,
     "lastLog": "Mar 13",
-    "risk": "OK"
+    "risk": "OK",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 8,
@@ -61,7 +82,10 @@
     "company": "SmartApps Ltd",
     "progress": 28,
     "lastLog": "Mar 5",
-    "risk": "At Risk"
+    "risk": "At Risk",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 9,
@@ -69,7 +93,10 @@
     "company": "CodeWorks Inc",
     "progress": 90,
     "lastLog": "Mar 15",
-    "risk": "OK"
+    "risk": "OK",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 10,
@@ -77,7 +104,10 @@
     "company": "InnovateX",
     "progress": 53,
     "lastLog": "Mar 11",
-    "risk": "OK"
+    "risk": "OK",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 11,
@@ -85,7 +115,10 @@
     "company": "FutureSoft",
     "progress": 39,
     "lastLog": "Mar 8",
-    "risk": "At Risk"
+    "risk": "At Risk",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 12,
@@ -93,7 +126,10 @@
     "company": "AlphaTech Solutions",
     "progress": 77,
     "lastLog": "Mar 14",
-    "risk": "OK"
+    "risk": "OK",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 13,
@@ -101,7 +137,10 @@
     "company": "ByteLabs",
     "progress": 64,
     "lastLog": "Mar 13",
-    "risk": "OK"
+    "risk": "OK",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 14,
@@ -109,7 +148,10 @@
     "company": "TechNova",
     "progress": 22,
     "lastLog": "Mar 4",
-    "risk": "At Risk"
+    "risk": "At Risk",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   },
   {
     "id": 15,
@@ -117,6 +159,9 @@
     "company": "CloudNet Africa",
     "progress": 85,
     "lastLog": "Mar 15",
-    "risk": "OK"
+    "risk": "OK",
+    "startDate": "Jan 13, 2026",
+    "endDate": "Apr 17, 2026",
+    "internshipDuration": 3
   }
 ]

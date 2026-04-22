@@ -1,0 +1,61 @@
+.internshipMonitoringCardMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.studentName{
+    font-size: 18px;
+    color: #1b222d;
+}
+.companyName{
+    font-size: 14px;
+    color: #676969;
+}
+.duration{
+    font-size: 14px;
+    color: #676969;
+}
+
+.dateRange{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.dateArrow{
+    display: inline-block;
+    transform: translateY(1px);
+}
+
+.durationMonths{
+    margin-left: 10px;
+    white-space: nowrap;
+}
+.cardRight{
+    width: 100px;
+    height: 20px;
+    background-color: #f3f5f7;
+    font-size: 13px;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.icons{
+    display: inline-block;
+    transform: translateY(1px);
+}
