@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import InternshipMonitoringCard from "../Components/InternshipMonitoringCard";
 import "../STYLES/InternshipMonitoring.css";
 import students from "../Data/studentTable.json";
+import ProgressOverviewCard from "../Components/ProgressOverviewCard";
 
 export default function InternshipMonitoring() {
   const [activeView, setActiveView] = useState("cards"); // "cards" | "other"
@@ -59,10 +60,8 @@ export default function InternshipMonitoring() {
       </div>
     ) : (
       <div className="internshipMonitoringOther">
-        <p className="internshipMonitoringOtherTitle">Other information</p>
-        <p className="internshipMonitoringOtherSub">
-          You can build this section later. For now it’s just a placeholder.
-        </p>
+        <p className="internshipMonitoringOtherTitle">Student Progress Overview</p>
+        <ProgressOverviewCard/>
       </div>
     )}
     </>

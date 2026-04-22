@@ -60,3 +60,87 @@
   flex-direction: column;
   gap: 16px;
 }
+
+.progressOverviewCard {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #e0e5eb;
+}
+
+.progressOverviewCardHeader {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  margin-bottom: 10px;
+}
+
+.progressOverviewCardTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1b222d;
+}
+
+.progressOverviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.progressOverviewRow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid #e0e5eb;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.progressOverviewStudent {
+  font-weight: 700;
+  color: #1b222d;
+  font-size: 14px;
+}
+
+.progressOverviewCompany {
+  color: #8894a2;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.progressOverviewBarWrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.progressOverviewBarTrack {
+  height: 10px;
+  border-radius: 999px;
+  background: #eef2f7;
+  overflow: hidden;
+}
+
+.progressOverviewBarFill {
+  height: 100%;
+  border-radius: 999px;
+  background: #11325f;
+}
+
+.progressOverviewPercent {
+  min-width: 44px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1b222d;
+}
+
+@media (max-width: 900px) {
+  .progressOverviewRow {
+    gap: 10px;
+  }
+}
