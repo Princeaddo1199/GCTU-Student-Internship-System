@@ -1,0 +1,65 @@
+/* Logbook Management page styles (moved from InternshipMonitoring.css) */
+
+.logbookManagementTitle {
+  padding: 20px 40px 0px 40px;
+}
+
+.logbookManagementTitleMain {
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.logbookManagementTitleSub {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8894a2;
+}
+
+.logbookManagementTabs {
+  margin: 14px 40px 0px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1px;
+  flex-wrap: wrap;
+  width: 355px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #d7d9da;
+}
+
+.logbookTabButton {
+  padding: 10px 14px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #d7d9da;
+  color: #383838;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logbookTabButton.active {
+  background-color: #11325f;
+  color: #ffffff;
+}
+
+.logbookManagementContent {
+  margin: 20px 40px 20px 40px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+}
+
+.logbookManagementSectionTitle {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.logbookManagementSectionSub {
+  margin: 0;
+  font-size: 14px;
+  color: #8894a2;
+}
