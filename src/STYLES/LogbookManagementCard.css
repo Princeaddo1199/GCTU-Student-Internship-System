@@ -1,0 +1,80 @@
+.logbookManagamentCards {
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.logbookCardRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.logbookCardMain {
+    flex: 1;
+    min-width: 0;
+}
+
+.logbookCardActions {
+    display: flex;
+    align-items: center;
+}
+.entriesTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+.entriesTitle .title {
+    font-size: 16px;  
+}
+.entriesTitle .status {
+    font-size: 11px;
+    font-weight: bold;
+    width: auto;
+    padding: 4px 7px;
+    border: 0.5px solid #cfcfcf;
+    border-radius: 999px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.entriesTitle .statusPending {
+    background-color: #ffffff;
+    color: #111827;
+}
+
+.entriesTitle .statusRejected {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+}
+
+.entriesTitle .statusApproved {
+    background-color: #01be44;
+    color: #ffffff;
+    border: none;
+}
+.entriesName{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+.entriesName .studentName {
+    font-size: 14px;
+    color: #8894a2;
+}
+.entriesName .date {
+    font-size: 14px;
+    color: #8894a2; 
+}
+.description {
+    font-size: 14px;
+}

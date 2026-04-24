@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "title": "API Development",
+    "status": "Pending",
+    "date": "2026-03-12",
+    "description": "Worked on REST API endpoints for inventory module using Node.js and Express."
+  },
+  {
+    "id": 2,
+    "title": "Data Cleaning",
+    "status": "Pending",
+    "date": "2026-03-11",
+    "description": "Cleaned and preprocessed customer datasets using Python pandas."
+  },
+  {
+    "id": 3,
+    "title": "Cloud Deployment",
+    "status": "Approved",
+    "date": "2026-03-10",
+    "description": "Deployed staging environment to AWS EC2 instances."
+  },
+  {
+    "id": 4,
+    "title": "UI Design",
+    "status": "Pending",
+    "date": "2026-03-09",
+    "description": "Designed dashboard layout and components using Figma."
+  },
+  {
+    "id": 5,
+    "title": "Authentication Setup",
+    "status": "Rejected",
+    "date": "2026-03-08",
+    "description": "Implemented JWT authentication and user login system."
+  },
+  {
+    "id": 6,
+    "title": "Database Schema Design",
+    "status": "Approved",
+    "date": "2026-03-07",
+    "description": "Designed PostgreSQL schema for users, logs, and approvals."
+  },
+  {
+    "id": 7,
+    "title": "Bug Fixing",
+    "status": "Pending",
+    "date": "2026-03-06",
+    "description": "Resolved issues with API error handling and validation."
+  },
+  {
+    "id": 8,
+    "title": "Frontend Integration",
+    "status": "Pending",
+    "date": "2026-03-05",
+    "description": "Connected React frontend to backend APIs."
+  },
+  {
+    "id": 9,
+    "title": "Unit Testing",
+    "status": "Rejected",
+    "date": "2026-03-04",
+    "description": "Wrote unit tests for API endpoints using Jest."
+  },
+  {
+    "id": 10,
+    "title": "Performance Optimization",
+    "status": "Pending",
+    "date": "2026-03-03",
+    "description": "Optimized database queries and reduced API response time."
+  },
+  {
+    "id": 11,
+    "title": "Documentation",
+    "status": "Approved",
+    "date": "2026-03-02",
+    "description": "Documented API endpoints and usage guidelines."
+  },
+  {
+    "id": 12,
+    "title": "CI/CD Setup",
+    "status": "Pending",
+    "date": "2026-03-01",
+    "description": "Configured GitHub Actions for automated deployment."
+  },
+  {
+    "id": 13,
+    "title": "Security Audit",
+    "status": "Pending",
+    "date": "2026-02-28",
+    "description": "Conducted security checks and vulnerability assessment."
+  },
+  {
+    "id": 14,
+    "title": "Notification System",
+    "status": "Rejected",
+    "date": "2026-02-27",
+    "description": "Implemented email notification system for approvals."
+  },
+  {
+    "id": 15,
+    "title": "Logging System",
+    "status": "Approved",
+    "date": "2026-02-26",
+    "description": "Set up centralized logging using Winston."
+  }
+]

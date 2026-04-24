@@ -1,0 +1,26 @@
+.approveLogbookActionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.approveLogbookActionButton {
+  border: none;
+  outline: none;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.approveLogbookActionButton.approve {
+  background-color: #11325f;
+  color: #ffffff;
+}
+
+.approveLogbookActionButton.reject {
+  
+  background-color: #dc2828;
+  color: #ffffff;
+}

@@ -45,11 +45,7 @@
 }
 
 .logbookManagementContent {
-  margin: 20px 40px 20px 40px;
-  padding: 18px;
-  background: #ffffff;
-  border: 1px solid #e0e5eb;
-  border-radius: 8px;
+  margin: 20px 40px;
 }
 
 .logbookManagementSectionTitle {
