@@ -1,0 +1,229 @@
+.attendanceMonitoringTitle {
+    padding: 20px 40px 0px 40px;
+  }
+  
+  .attendanceMonitoringTitleMain {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .attendanceMonitoringTitleSub {
+    font-size: 14px;
+    font-weight: 500;
+    color: #8894a2;
+  }
+
+.attendanceMonitoringTabs {
+  margin: 14px 20px 0px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1px;
+  flex-wrap: wrap;
+  width: 290px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #d7d9da;
+}
+
+.attendanceTabButton {
+  padding: 10px 14px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #d7d9da;
+  color: #383838;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.attendanceTabButton.active {
+  background-color: #11325f;
+  color: #ffffff;
+}
+
+.attendanceMonitoringContent {
+  margin: 20px 40px;
+}
+
+.attendanceHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.attendanceDailyTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.attendanceDailyTitle span {
+  font-size: 14px;
+}
+
+.attendanceDateSelectWrap {
+  display: flex;
+  align-items: center;
+}
+
+.attendanceDateSelect {
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #ffffff;
+  color: #111827;
+  font-weight: 600;
+  outline: none;
+}
+
+.attendanceTableCard {
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.attendanceTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendanceTable thead th {
+  text-align: left;
+  font-size: 12px;
+  color: #6b7280;
+  background: #f4f6f7;
+  padding: 12px 16px;
+  font-weight: 800;
+}
+
+.attendanceTable tbody td {
+  padding: 12px 16px;
+  border-top: 1px solid #eef2f7;
+  font-size: 13px;
+  color: #111827;
+}
+
+.attendanceTable tbody tr:hover {
+  background: #fafafa;
+}
+
+.attendanceStatusPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.attendanceStatusPresent {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.attendanceStatusAbsent {
+  background: #ff0000;
+  color: #ffffff;
+}
+
+.attendanceStatusLate {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.attendanceStatusUnknown {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.attendanceReportsContent {
+  margin: 20px 40px;
+}
+
+.attendanceReportsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.attendanceReportCard {
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.attendanceReportLabel {
+  color: #8894a2;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.attendanceReportValue {
+  font-size: 26px;
+  font-weight: 900;
+  margin-top: 8px;
+}
+
+.attendanceMiniTableCard {
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.attendanceMiniTableTitle {
+  padding: 14px 16px;
+  font-weight: 800;
+  color: #0f172a;
+  font-size: 14px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.attendanceMiniTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendanceMiniTable th {
+  text-align: left;
+  font-size: 12px;
+  color: #6b7280;
+  background: #f4f6f7;
+  padding: 12px 16px;
+  font-weight: 800;
+}
+
+.attendanceMiniTable td {
+  padding: 12px 16px;
+  border-top: 1px solid #eef2f7;
+  font-size: 13px;
+  color: #111827;
+}
+
+@media (max-width: 860px) {
+  .attendanceMonitoringContent,
+  .attendanceReportsContent {
+    margin: 20px 16px;
+  }
+
+  .attendanceMonitoringTabs {
+    margin: 14px 16px 0px 16px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .attendanceReportsGrid {
+    grid-template-columns: 1fr;
+  }
+}
