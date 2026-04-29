@@ -1,0 +1,71 @@
+.performanceEvaluationTitle {
+  padding: 20px 40px 0px 40px;
+}
+
+.performanceEvaluationTitleMain {
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.performanceEvaluationTitleSub {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8894a2;
+}
+
+.performanceEvaluationTabs {
+  margin: 14px 40px 0px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1px;
+  flex-wrap: wrap;
+  width: 330px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #d7d9da;
+}
+
+.performanceEvaluationTabButton {
+  padding: 10px 14px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #d7d9da;
+  color: #383838;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.performanceEvaluationTabButton.active {
+  background-color: #11325f;
+  color: #ffffff;
+}
+.evaluationPageMain{
+  margin: 20px 40px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+}
+.scoreboardPageMain{
+  margin: 20px 40px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+
+}
+.containerHead{
+  display: flex;
+  align-items: center;
+}
+.selectContainer{
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #f3f5f7;
+  border: 0.5px solid #e0e5eb;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
