@@ -3,6 +3,9 @@ import "../STYLES/SupervisorFeedback.css";
 import { MessageSquare } from "lucide-react";
 import Students from "../Data/studentTable.json";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import FeedbackCard from "../Components/FeedbackCard";
+
+let globalFeedbacks = [];
 
 export default function SupervisorFeedback() {
   const [activeView, setActiveView] = useState("provideFeedback");
@@ -10,12 +13,37 @@ export default function SupervisorFeedback() {
   const [feedbackId, setFeedbackId] = useState("");
   const [rating, setRating] = useState(0);
   const [comments, setComments] = useState("");
-
- 
+  const [feedbacks, setFeedbacks] = useState(globalFeedbacks);
 
   const submitFeedback = () => {
-    // Submit logic here
-    alert("Feedback submission logic goes here!");
+    if (!selectedId || !feedbackId || !rating || !comments) {
+      alert("Please fill all fields before submitting.");
+      return;
+    }
+
+    const student = Students.find((s) => s.id === parseInt(selectedId));
+    
+    const newFeedback = {
+      id: Date.now(),
+      studentName: student ? student.student : "Unknown Student",
+      type: feedbackId,
+      date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+      comment: comments,
+      rating: rating
+    };
+
+    const newFeedbacks = [newFeedback, ...feedbacks];
+    setFeedbacks(newFeedbacks);
+    globalFeedbacks = newFeedbacks;
+    
+    // Reset form
+    setSelectedId("");
+    setFeedbackId("");
+    setRating(0);
+    setComments("");
+    
+    // Switch view to previous feedback
+    setActiveView("previousFeedback");
   };
 
   return (
@@ -70,11 +98,11 @@ export default function SupervisorFeedback() {
               onChange={(e) => setFeedbackId(e.target.value)}
             >
               <option value="">Feedback type</option>
-              <option value="technical">Technical Skills</option>
-              <option value="communication">Communication</option>
-              <option value="professionalism">Professionalism</option>
-              <option value="problemSolving">Problem Solving</option>
-              <option value="teamwork">Teamwork</option>
+              <option value="Mid-Term">Mid-Term</option>
+              <option value="Weekly">Weekly</option>
+              <option value="Concern">Concern</option>
+              <option value="Final">Final</option>
+              <option value="Other">Other</option>
             </select>
           </div>
           <div className="rating">
@@ -135,7 +163,16 @@ export default function SupervisorFeedback() {
         </div>
       ) : (
         <div className="previousFeedbackPageMain">
-          <div>heloo</div>
+          {feedbacks.map((fb) => (
+            <FeedbackCard 
+              key={fb.id}
+              studentName={fb.studentName}
+              type={fb.type}
+              date={fb.date}
+              comment={fb.comment}
+              rating={fb.rating}
+            />
+          ))}
         </div>
       )}
     </>

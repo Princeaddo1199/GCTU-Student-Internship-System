@@ -1,0 +1,54 @@
+.feedbackCard {
+  background-color: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.feedbackCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedbackCardHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feedbackCardStudentName {
+  font-weight: 500;
+  color: #333;
+  font-size: 16px;
+}
+
+.feedbackCardTypeBadge {
+  background-color: #ffffff;
+  border: 1px solid #e0e5eb;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+}
+
+.feedbackCardRating {
+  display: flex;
+  gap: 3px;
+  font-size: 14px;
+}
+
+.feedbackCardDate {
+  font-size: 13px;
+  color: #8894a2;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+.feedbackCardComment {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}

@@ -1,0 +1,43 @@
+.industryReportsTitle {
+  padding: 20px 40px 0px 40px;
+}
+
+.industryReportsTitleMain {
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.industryReportsTitleSub {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8894a2;
+}
+
+.industryReportsTabs {
+  margin: 14px 40px 0px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1px;
+  flex-wrap: wrap;
+  width: 330px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #d7d9da;
+}
+
+.industryReportsTabButton {
+  padding: 10px 14px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #d7d9da;
+  color: #383838;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.industryReportsTabButton.active {
+  background-color: #11325f;
+  color: #ffffff;
+}

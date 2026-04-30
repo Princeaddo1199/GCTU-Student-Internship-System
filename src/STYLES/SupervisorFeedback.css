@@ -84,3 +84,10 @@
 .submitEvaluationBtn:hover{
   background-color: #11325f;
 }
+
+.previousFeedbackPageMain {
+  margin: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
