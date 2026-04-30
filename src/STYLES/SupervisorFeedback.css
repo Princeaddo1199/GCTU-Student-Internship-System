@@ -1,0 +1,86 @@
+.supervisorFeedbackTitle {
+  padding: 20px 40px 0px 40px;
+}
+
+.supervisorFeedbackTitleMain {
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.supervisorFeedbackTitleSub {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8894a2;
+}
+.supervisorFeedbackTabs {
+  margin: 14px 40px 0px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1px;
+  flex-wrap: wrap;
+  width: 300px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #d7d9da;
+}
+.supervisorFeedbackTabButton {
+  padding: 10px 14px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #d7d9da;
+  color: #383838;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.supervisorFeedbackTabButton.active {
+  background-color: #11325f;
+  color: #ffffff;
+}
+.provideFeedbackPageMain{
+  margin: 20px 40px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+}
+.subTitle{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* margin: 20px; */
+}
+.selectContainer{
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #f3f5f7;
+  border: 0.5px solid #e0e5eb;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: inherit;
+  color: #555;
+}
+.rating {
+    margin-top: 20px;
+}
+
+.submitEvaluationBtn{
+  padding: 10px 20px;
+  width: 100%;
+  height: 45px;
+  margin-top: 30px;
+  background-color: #11325f;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  
+}
+
+.submitEvaluationBtn:hover{
+  background-color: #11325f;
+}
