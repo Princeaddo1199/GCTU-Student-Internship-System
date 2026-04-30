@@ -9,7 +9,7 @@ export default function MyStudents() {
   const [query, setQuery] = useState("");
 
   const rows = useMemo(() => {
-    // Derive fields needed by the screenshot without changing your JSON.
+    
     const withDerived = students.map((s) => {
       const status = s.risk === "At Risk" ? "At Risk" : "Active";
 

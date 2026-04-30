@@ -1,0 +1,53 @@
+.scoreCardMain {
+    background: #fff;
+    border: 1px solid #e0e5eb;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.scoreCardHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.studentName {
+    font-size: 16px;
+    color: #383838;
+}
+
+.overallRating {
+    font-size: 14px;
+    color: #11325f;
+}
+
+.skillRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.skillRow:last-child {
+    margin-bottom: 0;
+}
+
+.skillName {
+    width: 140px;
+    font-size: 13px;
+    color: #8894a2;
+}
+
+.skillRatingBar {
+    flex-grow: 1;
+    margin: 0 15px;
+}
+
+.ratingNumber {
+    width: 20px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+    color: #383838;
+}

@@ -8,7 +8,8 @@
     "risk": "OK",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 4.4
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "risk": "OK",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 3
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "risk": "At Risk",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 4.5
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "risk": "OK",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 3.6
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
     "risk": "At Risk",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 4.8
   },
   {
     "id": 6,
@@ -63,7 +68,8 @@
     "risk": "OK",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 3.1
   },
   {
     "id": 7,
@@ -74,7 +80,8 @@
     "risk": "OK",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 3.5
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@
     "risk": "At Risk",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 3.1
   },
   {
     "id": 9,
@@ -96,7 +104,8 @@
     "risk": "OK",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 4.6
   },
   {
     "id": 10,
@@ -107,7 +116,8 @@
     "risk": "OK",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 4.3
   },
   {
     "id": 11,
@@ -118,7 +128,8 @@
     "risk": "At Risk",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 3.9
   },
   {
     "id": 12,
@@ -129,7 +140,8 @@
     "risk": "OK",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 3.5
   },
   {
     "id": 13,
@@ -140,7 +152,8 @@
     "risk": "OK",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 3.3
   },
   {
     "id": 14,
@@ -151,7 +164,8 @@
     "risk": "At Risk",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 4.8
   },
   {
     "id": 15,
@@ -162,6 +176,7 @@
     "risk": "OK",
     "startDate": "Jan 13, 2026",
     "endDate": "Apr 17, 2026",
-    "internshipDuration": 3
+    "internshipDuration": 3,
+    "rating": 4
   }
 ]

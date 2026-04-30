@@ -50,11 +50,6 @@
 }
 .scoreboardPageMain{
   margin: 20px 40px;
-  padding: 18px;
-  background: #ffffff;
-  border: 1px solid #e0e5eb;
-  border-radius: 8px;
-
 }
 .containerHead{
   display: flex;
@@ -68,4 +63,43 @@
   border: 0.5px solid #e0e5eb;
   border-radius: 5px;
   box-sizing: border-box;
+  font-family: inherit;
+  color: #555;
+}
+
+.ratingContainer {
+  margin-top: 20px;
+}
+
+.additionalComments {
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: inherit;
+  resize: vertical;
+  color: #555;
+}
+
+.additionalComments::placeholder {
+  color: #8894a2;
+}
+
+.submitEvaluationBtn{
+  padding: 10px 20px;
+  width: 100%;
+  margin-top: 30px;
+  background-color: #11325f;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.submitEvaluationBtn:hover{
+  background-color: #11325f;
 }
