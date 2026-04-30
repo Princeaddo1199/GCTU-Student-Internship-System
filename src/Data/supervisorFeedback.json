@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "studentId": 1,
+    "supervisorName": "Michael Osei",
+    "date": "Mar 10, 2026",
+    "comment": "Jane has shown excellent initiative and quickly adapted to the team workflow. Strong technical potential.",
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "studentId": 2,
+    "supervisorName": "Sarah Adu",
+    "date": "Mar 9, 2026",
+    "comment": "Kofi demonstrates good analytical skills but could improve on time management and communication.",
+    "rating": 3.5
+  },
+  {
+    "id": 3,
+    "studentId": 4,
+    "supervisorName": "James Mensah",
+    "date": "Mar 11, 2026",
+    "comment": "Outstanding performance. Yaw completed all assigned tasks ahead of schedule with minimal supervision.",
+    "rating": 5
+  }
+]

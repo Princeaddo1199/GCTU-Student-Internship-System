@@ -41,3 +41,65 @@
   background-color: #11325f;
   color: #ffffff;
 }
+
+.industryFeedbackPageMain {
+  margin: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.collaborationNotesPageMain {
+  margin: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.collaborationNotesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.addNoteContainer {
+  background-color: #ffffff;
+  border: 1px solid #e0e5eb;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.addNoteTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.addNoteTextarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  border: 1px solid #e0e5eb;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  resize: none;
+  font-family: inherit;
+  font-size: 14px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.saveNoteBtn {
+  background-color: #11325f;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.saveNoteBtn:hover {
+  background-color: #0c2445;
+}

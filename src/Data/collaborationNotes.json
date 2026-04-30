@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "supervisorName": "Michael Osei",
+    "company": "TechCorp Ghana",
+    "title": "Progress Discussion",
+    "date": "Mar 8, 2026",
+    "comment": "Discussed Jane's mid-term progress. Agreed to assign more complex development tasks to challenge her further."
+  },
+  {
+    "id": 2,
+    "supervisorName": "Sarah Adu",
+    "company": "DataFlow Inc",
+    "title": "Attendance Concern",
+    "date": "Mar 6, 2026",
+    "comment": "Kofi has been arriving late consistently. Industry supervisor will monitor and report back."
+  },
+  {
+    "id": 3,
+    "supervisorName": "James Mensah",
+    "company": "CloudBase Co",
+    "title": "Project Extension",
+    "date": "Mar 10, 2026",
+    "comment": "Yaw's internship project extended to include production deployment phase. Positive feedback overall."
+  }
+]
