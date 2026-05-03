@@ -1,0 +1,30 @@
+{
+  "performanceScores": [
+    { "studentId": 1, "score": 85 },
+    { "studentId": 2, "score": 72 },
+    { "studentId": 3, "score": 52 },
+    { "studentId": 4, "score": 92 },
+    { "studentId": 6, "score": 64 }
+  ],
+  "progressTrend": [
+    { "week": "W1", "progress": 15 },
+    { "week": "W2", "progress": 28 },
+    { "week": "W3", "progress": 38 },
+    { "week": "W4", "progress": 48 },
+    { "week": "W5", "progress": 55 },
+    { "week": "W6", "progress": 62 },
+    { "week": "W7", "progress": 70 },
+    { "week": "W8", "progress": 76 }
+  ],
+  "statusDistribution": [
+    { "name": "On Track", "value": 3, "color": "#3BAF7D" },
+    { "name": "At Risk", "value": 2, "color": "#E73F3F" }
+  ],
+  "summaryStatistics": {
+    "totalStudents": 5,
+    "avgPerformance": "72.8%",
+    "logbooksReviewed": 38,
+    "visitsCompleted": 3,
+    "evaluationsSubmitted": 4
+  }
+}

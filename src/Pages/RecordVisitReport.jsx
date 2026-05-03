@@ -56,9 +56,8 @@ export default function RecordVisitReport() {
               onChange={(e) => setVisitType(e.target.value)}
             >
               <option value="">Visit Type</option>
-              <option value="Mid-Term">Mid-Term</option>
-              <option value="Final">Final</option>
-              <option value="Other">Other</option>
+              <option value="Physical">Physical</option>
+              <option value="Virtual">Virtual</option>
             </select>
           </div>
         </div>
@@ -113,6 +112,16 @@ export default function RecordVisitReport() {
             </button>
           </div>
         </div>
+        <button
+          className="submitVisitBtn"
+          type="button"
+          onClick={() => alert("Submit Evaluation logic goes here")}
+        >
+          Submit Visit Report
+        </button>
+      </div>
+      <div className="recentVisits">
+        <p>Recent Visits</p>
       </div>
     </>
   );

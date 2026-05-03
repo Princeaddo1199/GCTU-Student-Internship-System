@@ -1,0 +1,147 @@
+.reports-analysis-container {
+    padding: 30px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.reports-header {
+    margin-bottom: 24px;
+}
+
+.reports-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1a202c;
+}
+
+.reports-header p {
+    font-size: 14px;
+    color: #64748b;
+    margin-top: 0;
+}
+
+.reports-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    background-color: #f1f5f9;
+    padding: 4px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+.reports-tabs button {
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.reports-tabs button.active {
+    background-color: #ffffff;
+    color: #1a202c;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.reports-tabs button:hover:not(.active) {
+    background-color: #e2e8f0;
+}
+
+.reports-content {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.chart-card, .summary-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.chart-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.chart-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a202c;
+    margin: 0;
+}
+
+.chart-icon {
+    color: #64748b;
+}
+
+.summary-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+
+.summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.summary-item:first-child {
+    padding-top: 0;
+}
+
+.summary-value {
+    font-weight: 600;
+    color: #1a202c;
+    font-size: 15px;
+}
+
+.recharts-default-tooltip {
+    border-radius: 8px !important;
+    border: none !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+}
+
+@media (max-width: 1024px) {
+    .reports-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Remove default focus outline from Recharts elements when clicked */
+.recharts-pie-sector:focus,
+.recharts-sector:focus,
+.recharts-surface:focus,
+path.recharts-sector:focus,
+.recharts-rectangle:focus,
+.recharts-bar-rectangle:focus {
+    outline: none !important;
+}
