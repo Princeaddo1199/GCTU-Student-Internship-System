@@ -3,12 +3,13 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "../STYLES/RecordVisitReport.css";
 import Students from "../Data/studentTable.json";
-import { CalendarDays } from "lucide-react";
+import { CalendarDays, MapPin } from "lucide-react";
 
 export default function RecordVisitReport() {
   const [selectedId, setSelectedId] = useState("");
   const [visitType, setVisitType] = useState("");
   const [selectedDate, setSelectedDate] = useState(null);
+  const [comments, setComments] = useState("");
   // const student = Students.find((s) => s.id === parseInt(selectedId));
 
   return (
@@ -20,12 +21,22 @@ export default function RecordVisitReport() {
         </p>
       </div>
       <div className="recordVisitReportPageMain">
-        <p className="subTitle">New Visit Report</p>
+        <div
+          style={{
+            display: "flex",
+            gap: "10px",
+            alignItems: "center",
+            marginBottom: "10px",
+          }}
+        >
+          <MapPin size={18} />
+          <p className="subTitle">New Visit Report</p>
+        </div>
         <div className="inputSection">
           <div className="selectStudent">
             <label htmlFor="student">Student</label>
             <select
-              className="selectContainer"
+              className="selectStudentContainer"
               value={selectedId}
               onChange={(e) => setSelectedId(e.target.value)}
             >
@@ -40,7 +51,7 @@ export default function RecordVisitReport() {
           <div className="visitType">
             <label htmlFor="visit type">Visit type</label>
             <select
-              className="selectContainer"
+              className="selectVisitContainer"
               value={visitType}
               onChange={(e) => setVisitType(e.target.value)}
             >
@@ -60,11 +71,46 @@ export default function RecordVisitReport() {
                 icon={<CalendarDays />}
                 selected={selectedDate}
                 onChange={(date) => setSelectedDate(date)}
-                className="selectContainer"
+                className="datePickerContainer"
                 placeholderText="mm/dd/yyyy"
                 dateFormat="MM/dd/yyyy"
               />
             </div>
+          </div>
+        </div>
+        <div className="observationArea">
+          <p style={{ marginTop: "30px" }}>Observations & Recommendations</p>
+          <textarea
+            className="commentsArea"
+            placeholder="Observations and recommendations..."
+            rows="8"
+            value={comments}
+            onChange={(e) => setComments(e.target.value)}
+          />
+        </div>
+        <div className="actionsArea">
+          <p style={{ marginTop: "30px" }}>Action Items</p>
+          <textarea
+            className="actionItemsArea"
+            placeholder="Action Items (If any...)"
+            rows="8"
+            value={comments}
+            onChange={(e) => setComments(e.target.value)}
+          />
+        </div>
+        <div className="attachmentsArea">
+          <p style={{ marginTop: "30px" }}>Attachments</p>
+          <div className="uploadArea">
+            <p style={{ textAlign: "center" }}>
+              Drag & drop files here of click to browse <br />
+              Supports PDF, Images, and documents (max 10mb)
+            </p>
+            <button
+              className="uploadFilesButton"
+              onClick={() => alert("Upload Files logic will go here")}
+            >
+              Choose Files
+            </button>
           </div>
         </div>
       </div>
