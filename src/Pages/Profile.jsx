@@ -77,6 +77,7 @@ export default function Profile() {
                     type="text"
                     placeholder="+233 24 123 4567"
                     className="profileInputs"
+                    disabled
                   />
                 </div>
               </div>

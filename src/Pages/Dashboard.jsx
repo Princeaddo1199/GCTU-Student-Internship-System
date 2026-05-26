@@ -70,7 +70,7 @@ export default function Dashboard() {
         <BigCard
           icon={Users}
           title="Total Interns"
-          value="12"
+          value="15"
           iconColor={{
             backgroundColor: "#ebeaf0",
           }}
