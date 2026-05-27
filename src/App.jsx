@@ -1,22 +1,22 @@
 import "./App.css";
-import Sidebar from "./Components/Sidebar";
-import LoginPage from "./Pages/LoginPage";
+import Sidebar from "./Features/AcademicSupervisor/Components/Sidebar";
+import LoginPage from "./Features/AcademicSupervisor/Pages/LoginPage";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Dashboard from "./Pages/Dashboard";
-import RecordVisitReport from "./Pages/RecordVisitReport";
-import VisitHistory from "./Pages/VisitHistory";
-import MyStudents from "./Pages/MyStudents";
-import InternshipMonitoring from "./Pages/InternshipMonitoring";
-import LogbookManagement from "./Pages/LogbookManagement";
-import AttendanceMonitoring from "./Pages/AttendanceMonitoring";
-import PerformanceEvaluation from "./Pages/PerformanceEvaluation";
-import SupervisorFeedback from "./Pages/SupervisorFeedback";
-import IndustryReports from "./Pages/IndustryReports";
-import Messages from "./Pages/Messages";
-import Notifications from "./Pages/Notifications";
-import ReportsAnalysis from "./Pages/ReportsAnalysis";
-import Profile from "./Pages/Profile";
-import Searchbar from "./Components/Searchbar";
+import Dashboard from "./Features/AcademicSupervisor/Pages/Dashboard";
+import RecordVisitReport from "./Features/AcademicSupervisor/Pages/RecordVisitReport";
+import VisitHistory from "./Features/AcademicSupervisor/Pages/VisitHistory";
+import MyStudents from "./Features/AcademicSupervisor/Pages/MyStudents";
+import InternshipMonitoring from "./Features/AcademicSupervisor/Pages/InternshipMonitoring";
+import LogbookManagement from "./Features/AcademicSupervisor/Pages/LogbookManagement";
+import AttendanceMonitoring from "./Features/AcademicSupervisor/Pages/AttendanceMonitoring";
+import PerformanceEvaluation from "./Features/AcademicSupervisor/Pages/PerformanceEvaluation";
+import SupervisorFeedback from "./Features/AcademicSupervisor/Pages/SupervisorFeedback";
+import IndustryReports from "./Features/AcademicSupervisor/Pages/IndustryReports";
+import Messages from "./Features/AcademicSupervisor/Pages/Messages";
+import Notifications from "./Features/AcademicSupervisor/Pages/Notifications";
+import ReportsAnalysis from "./Features/AcademicSupervisor/Pages/ReportsAnalysis";
+import Profile from "./Features/AcademicSupervisor/Pages/Profile";
+import Searchbar from "./Features/AcademicSupervisor/Components/Searchbar";
 
 function MainLayout({ children }) {
   return (

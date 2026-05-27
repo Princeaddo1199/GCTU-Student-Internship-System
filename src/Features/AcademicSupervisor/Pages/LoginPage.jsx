@@ -1,4 +1,4 @@
-import logoImage from "../assets/gctu-logo.png";
+import logoImage from "../../../assets/gctu-logo.png";
 import "../STYLES/LoginPage.css";
 import Select, { components } from "react-select";
 import { Check, Mail, Lock } from "lucide-react";

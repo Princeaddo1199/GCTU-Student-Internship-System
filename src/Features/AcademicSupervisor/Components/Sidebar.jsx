@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/gctu-logo-1.png";
+import Logo from "../../../assets/gctu-logo-1.png";
 import "../STYLES/Sidebar.css";
 import {
   ChevronRight,
