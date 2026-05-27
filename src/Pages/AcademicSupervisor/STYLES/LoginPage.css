@@ -1,0 +1,110 @@
+.containerMain {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url("../assets/gctu-gate-1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formContainer {
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin-top: 250px;
+  box-shadow:
+    -3px 0px 5px rgba(0, 0, 0, 0.2),
+    3px 0px 5px rgba(0, 0, 0, 0.2),
+    0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.logoImage {
+  width: 400px;
+  height: 90px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.copyrightFooter {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+.textInput {
+  width: 330px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f3f5f7;
+  font-size: 15px;
+  color: #111;
+}
+.textInput:focus {
+  outline: none;
+  border-color: #b3b2b2;
+}
+.emailInputContainer {
+  display: flex;
+  align-items: center;
+  width: 330px;
+  height: 40px;
+  background-color: #f3f5f7;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+  gap: 8px;
+}
+.emailInputContainer input {
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  color: #111;
+  outline: none;
+}
+.emailIcon {
+  color: #979899;
+  flex-shrink: 0;
+}
+/* .roleSelection {
+  width: 350px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 0.5px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f3f5f7;
+} */
+
+/* .roleSelection:focus {
+  outline: none;
+  border-color: #b3b2b2;
+} */
+.passwordSection {
+  display: flex;
+  justify-content: space-between;
+}
+.signInButton {
+  width: 350px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(to right, #1d3989, #21273b);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.requestAccount {
+  margin-top: 20px;
+}
