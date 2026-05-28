@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../STYLES/SupervisorFeedback.css";
 import { MessageSquare } from "lucide-react";
-import Students from "../Data/studentTable.json";
+import Students from "../../../Data/studentTable.json";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import FeedbackCard from "../Components/FeedbackCard";
 
@@ -22,26 +22,30 @@ export default function SupervisorFeedback() {
     }
 
     const student = Students.find((s) => s.id === parseInt(selectedId));
-    
+
     const newFeedback = {
       id: Date.now(),
       studentName: student ? student.student : "Unknown Student",
       type: feedbackId,
-      date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+      date: new Date().toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      }),
       comment: comments,
-      rating: rating
+      rating: rating,
     };
 
     const newFeedbacks = [newFeedback, ...feedbacks];
     setFeedbacks(newFeedbacks);
     globalFeedbacks = newFeedbacks;
-    
+
     // Reset form
     setSelectedId("");
     setFeedbackId("");
     setRating(0);
     setComments("");
-    
+
     // Switch view to previous feedback
     setActiveView("previousFeedback");
   };
@@ -164,7 +168,7 @@ export default function SupervisorFeedback() {
       ) : (
         <div className="previousFeedbackPageMain">
           {feedbacks.map((fb) => (
-            <FeedbackCard 
+            <FeedbackCard
               key={fb.id}
               studentName={fb.studentName}
               type={fb.type}

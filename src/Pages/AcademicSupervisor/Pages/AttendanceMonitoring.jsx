@@ -1,10 +1,23 @@
 import React, { useMemo, useState } from "react";
 import { CalendarDays } from "lucide-react";
-import students from "../Data/studentTable.json";
-import attendanceRecords from "../Data/attendanceRecords.json";
+import students from "../../../Data/studentTable.json";
+import attendanceRecords from "../../../Data/attendanceRecords.json";
 import "../STYLES/AttendanceMonitoring.css";
 
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const MONTHS = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 function formatDateLabel(isoDate) {
   // Expected format: YYYY-MM-DD
@@ -30,7 +43,10 @@ export default function AttendanceMonitoring() {
     return unique;
   }, []);
 
-  const latestDate = availableDates.length > 0 ? availableDates[availableDates.length - 1] : null;
+  const latestDate =
+    availableDates.length > 0
+      ? availableDates[availableDates.length - 1]
+      : null;
   const resolvedDate = selectedDate === "TODAY" ? latestDate : selectedDate;
 
   const attendanceByStudentId = useMemo(() => {
@@ -180,19 +196,28 @@ export default function AttendanceMonitoring() {
           <div className="attendanceReportsGrid">
             <div className="attendanceReportCard">
               <div className="attendanceReportLabel">Present</div>
-              <div className="attendanceReportValue" style={{ color: "#166534" }}>
+              <div
+                className="attendanceReportValue"
+                style={{ color: "#166534" }}
+              >
                 {counts.Present}
               </div>
             </div>
             <div className="attendanceReportCard">
               <div className="attendanceReportLabel">Late</div>
-              <div className="attendanceReportValue" style={{ color: "#111827" }}>
+              <div
+                className="attendanceReportValue"
+                style={{ color: "#111827" }}
+              >
                 {counts.Late}
               </div>
             </div>
             <div className="attendanceReportCard">
               <div className="attendanceReportLabel">Absent</div>
-              <div className="attendanceReportValue" style={{ color: "#991b1b" }}>
+              <div
+                className="attendanceReportValue"
+                style={{ color: "#991b1b" }}
+              >
                 {counts.Absent}
               </div>
             </div>

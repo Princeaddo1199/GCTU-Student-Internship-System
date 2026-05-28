@@ -2,14 +2,13 @@ import React, { useMemo, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Box, LinearProgress, Typography, Button } from "@mui/material";
 import { Search } from "lucide-react";
-import students from "../Data/studentTable.json";
+import students from "../../../Data/studentTable.json";
 import "../STYLES/MyStudents.css";
 
 export default function MyStudents() {
   const [query, setQuery] = useState("");
 
   const rows = useMemo(() => {
-    
     const withDerived = students.map((s) => {
       const status = s.risk === "At Risk" ? "At Risk" : "Active";
 
@@ -49,7 +48,14 @@ export default function MyStudents() {
               : 0;
 
           return (
-            <Box sx={{ width: "100%", display: "flex", alignItems: "center", gap: 1 }}>
+            <Box
+              sx={{
+                width: "100%",
+                display: "flex",
+                alignItems: "center",
+                gap: 1,
+              }}
+            >
               <LinearProgress
                 variant="determinate"
                 value={value}

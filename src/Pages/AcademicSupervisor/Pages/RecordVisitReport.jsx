@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "../STYLES/RecordVisitReport.css";
-import Students from "../Data/studentTable.json";
+import Students from "../../../Data/studentTable.json";
 import { CalendarDays, MapPin } from "lucide-react";
 
 export default function RecordVisitReport() {

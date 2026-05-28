@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import students from "../Data/studentTable.json";
+import students from "../../../Data/studentTable.json";
 
 function clampProgress(value) {
   const n = Number(value);

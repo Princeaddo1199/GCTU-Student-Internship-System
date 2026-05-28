@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GraduationCap, Lock, User } from "lucide-react";
 import "../STYLES/Profile.css";
-import studentTable from "../Data/studentTable.json";
+import studentTable from "../../../Data/studentTable.json";
 
 export default function Profile() {
   const [activeView, setActiveView] = useState("personalInformation");
@@ -196,7 +196,9 @@ export default function Profile() {
             <button
               className="updatePasswordBtn"
               onClick={() =>
-                alert("Update password logic to update the password of supervisor goes here")
+                alert(
+                  "Update password logic to update the password of supervisor goes here",
+                )
               }
             >
               Update Password

@@ -1,7 +1,13 @@
 import React from "react";
 import BigCard from "../Components/BigCard";
-import { Building2, Calendar, CalendarCheck, TriangleAlert, Users } from "lucide-react";
-import students from "../Data/studentTable.json";
+import {
+  Building2,
+  Calendar,
+  CalendarCheck,
+  TriangleAlert,
+  Users,
+} from "lucide-react";
+import students from "../../../Data/studentTable.json";
 import { DataGrid } from "@mui/x-data-grid";
 import { Box, LinearProgress, Typography } from "@mui/material";
 import "../STYLES/Dashboard.css";
@@ -103,7 +109,15 @@ export default function Dashboard() {
       </div>
       <div className="tableBarContainer">
         <div className="studentsTableContainer">
-          <p style={{fontWeight: "bold", fontSize: "20px", marginBottom: "10px"}}>Student Monitoring</p>
+          <p
+            style={{
+              fontWeight: "bold",
+              fontSize: "20px",
+              marginBottom: "10px",
+            }}
+          >
+            Student Monitoring
+          </p>
           <DataGrid
             rows={students}
             columns={columns}
@@ -122,28 +136,34 @@ export default function Dashboard() {
           />
         </div>
         <div>
-        <div className="progressTrendContainer">
-          <p style={{fontWeight: "bold", fontSize: "20px", marginBottom: "10px"}}>Avg. Progress Bar</p>
-          <Chart />
-        </div>
-        <div className="upcomingVisitsContainer">
-          <p
-            style={{
-              fontWeight: "bold",
-              fontSize: "20px",
-              marginBottom: "10px",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-            }}
-          >
-            <Calendar size={20} color="#8894a2" />
-            Upcoming Visits
-          </p>
-          <div>
-          visit cards go here
+          <div className="progressTrendContainer">
+            <p
+              style={{
+                fontWeight: "bold",
+                fontSize: "20px",
+                marginBottom: "10px",
+              }}
+            >
+              Avg. Progress Bar
+            </p>
+            <Chart />
           </div>
-        </div>
+          <div className="upcomingVisitsContainer">
+            <p
+              style={{
+                fontWeight: "bold",
+                fontSize: "20px",
+                marginBottom: "10px",
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+              }}
+            >
+              <Calendar size={20} color="#8894a2" />
+              Upcoming Visits
+            </p>
+            <div>visit cards go here</div>
+          </div>
         </div>
       </div>
     </div>

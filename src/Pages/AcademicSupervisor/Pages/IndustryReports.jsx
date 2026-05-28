@@ -1,10 +1,10 @@
 import React from "react";
-import "../STYLES/IndustryReports.css"
+import "../STYLES/IndustryReports.css";
 import { useState } from "react";
-import Students from "../Data/studentTable.json";
-import SupervisorFeedbacks from "../Data/supervisorFeedback.json";
+import Students from "../../../Data/studentTable.json";
+import SupervisorFeedbacks from "../../../Data/supervisorFeedback.json";
 import IndustryFeedbackCard from "../Components/IndustryFeedbackCard";
-import CollaborationNotesData from "../Data/collaborationNotes.json";
+import CollaborationNotesData from "../../../Data/collaborationNotes.json";
 import CollaborationNoteCard from "../Components/CollaborationNoteCard";
 
 let globalNotes = [...CollaborationNotesData];
@@ -16,14 +16,18 @@ export default function IndustryReports() {
 
   const saveNote = () => {
     if (!newNoteText.trim()) return;
-    
+
     const newNote = {
       id: Date.now(),
       supervisorName: "Prof. Ama Boateng",
       company: "Academic Supervisor",
       title: "New Note",
-      date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
-      comment: newNoteText
+      date: new Date().toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      }),
+      comment: newNoteText,
     };
 
     const updatedNotes = [...notes, newNote];
@@ -61,7 +65,7 @@ export default function IndustryReports() {
       {activeView === "industryFeedback" ? (
         <div className="industryFeedbackPageMain">
           {SupervisorFeedbacks.map((feedback) => {
-            const student = Students.find(s => s.id === feedback.studentId);
+            const student = Students.find((s) => s.id === feedback.studentId);
             if (!student) return null;
             return (
               <IndustryFeedbackCard
@@ -80,7 +84,7 @@ export default function IndustryReports() {
         <div className="collaborationNotesPageMain">
           <div className="collaborationNotesList">
             {notes.map((note) => (
-              <CollaborationNoteCard 
+              <CollaborationNoteCard
                 key={note.id}
                 supervisorName={note.supervisorName}
                 company={note.company}
@@ -92,13 +96,15 @@ export default function IndustryReports() {
           </div>
           <div className="addNoteContainer">
             <h3 className="addNoteTitle">Add Collaboration Note</h3>
-            <textarea 
-              className="addNoteTextarea" 
-              placeholder="Record your collaboration notes..." 
+            <textarea
+              className="addNoteTextarea"
+              placeholder="Record your collaboration notes..."
               value={newNoteText}
               onChange={(e) => setNewNoteText(e.target.value)}
             />
-            <button className="saveNoteBtn" onClick={saveNote}>Save Note</button>
+            <button className="saveNoteBtn" onClick={saveNote}>
+              Save Note
+            </button>
           </div>
         </div>
       )}
