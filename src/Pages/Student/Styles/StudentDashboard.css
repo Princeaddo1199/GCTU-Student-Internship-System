@@ -1,0 +1,299 @@
+.studentDashboard {
+  padding: 18px 22px 26px;
+}
+
+.studentHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.studentTitle {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f1f33;
+}
+
+.studentSubtitle {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #5f6f82;
+  font-weight: 500;
+}
+
+.studentStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.studentCard {
+  background: #ffffff;
+  border: 1px solid #e6ebf1;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(15, 31, 51, 0.05);
+  padding: 14px;
+  min-height: 92px;
+}
+
+.studentCardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.studentCardTitle {
+  margin: 0;
+  font-size: 12px;
+  color: #7a8898;
+  font-weight: 600;
+}
+
+.studentCardValue {
+  margin: 6px 0 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f1f33;
+}
+
+.studentCardSubtext {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #7a8898;
+  font-weight: 500;
+}
+
+.studentCardIconWrap {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #e6ebf1;
+  background: #f6f8fb;
+  color: #11325f;
+  flex: 0 0 auto;
+}
+
+.studentGrid2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.studentPanel {
+  background: #ffffff;
+  border: 1px solid #e6ebf1;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(15, 31, 51, 0.05);
+}
+
+.studentPanelHeader {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eef2f6;
+}
+
+.studentPanelTitle {
+  margin: 0;
+  font-size: 13px;
+  color: #0f1f33;
+  font-weight: 700;
+}
+
+.studentChart {
+  padding: 14px;
+}
+
+.studentRechartWrap {
+  height: 220px;
+  width: 100%;
+}
+
+.studentChartBars {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  align-items: end;
+  height: 200px;
+}
+
+.studentChartBarCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.studentChartBar {
+  width: 100%;
+  max-width: 42px;
+  background: #11325f;
+  border-radius: 8px;
+  opacity: 0.9;
+}
+
+.studentChartBar:hover {
+  opacity: 1;
+}
+
+.studentChartLabel {
+  font-size: 11px;
+  color: #7a8898;
+  font-weight: 600;
+}
+
+.studentProgressList {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.studentProgressRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.studentProgressLabel {
+  font-size: 12px;
+  color: #5f6f82;
+  font-weight: 600;
+}
+
+.studentProgressValue {
+  font-size: 12px;
+  color: #0f1f33;
+  font-weight: 700;
+}
+
+.studentProgressTrack {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: #eef2f6;
+  overflow: hidden;
+}
+
+.studentProgressFill {
+  height: 100%;
+  border-radius: 999px;
+  background: #11325f;
+}
+
+.studentPanelFull {
+  margin-top: 14px;
+}
+
+.studentActivityList {
+  padding: 8px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.studentActivityItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 10px;
+  border: 1px solid #eef2f6;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.studentActivityLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.studentActivityIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f8fb;
+  border: 1px solid #e6ebf1;
+  color: #11325f;
+  flex: 0 0 auto;
+}
+
+.studentActivityTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f1f33;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 680px;
+}
+
+.studentActivityDate {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #7a8898;
+  font-weight: 600;
+}
+
+.studentBadge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.studentBadge.success {
+  background: #e9f8ef;
+  color: #167a3a;
+  border-color: #c9efd7;
+}
+
+.studentBadge.warning {
+  background: #fff6e5;
+  color: #9a5a00;
+  border-color: #ffe2b3;
+}
+
+@media (max-width: 1100px) {
+  .studentStatsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .studentGrid2 {
+    grid-template-columns: 1fr;
+  }
+  .studentActivityTitle {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 640px) {
+  .studentDashboard {
+    padding: 14px 14px 20px;
+  }
+  .studentStatsGrid {
+    grid-template-columns: 1fr;
+  }
+  .studentChartBars {
+    height: 170px;
+  }
+  .studentRechartWrap {
+    height: 190px;
+  }
+  .studentActivityTitle {
+    max-width: 240px;
+  }
+}

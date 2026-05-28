@@ -1,0 +1,242 @@
+.attendancePage {
+  padding: 18px 22px 26px;
+}
+
+.attendanceHeader {
+  margin-bottom: 12px;
+}
+
+.attendanceTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f1f33;
+}
+
+.attendanceSubtitle {
+  margin: 6px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #5f6f82;
+}
+
+.attendanceStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.attendanceStatCard {
+  background: #ffffff;
+  border: 1px solid #e6ebf1;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(15, 31, 51, 0.05);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+}
+
+.attendanceStatValue {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.attendanceStatValue.present {
+  color: #167a3a;
+}
+
+.attendanceStatValue.late {
+  color: #b07200;
+}
+
+.attendanceStatValue.absent {
+  color: #c53030;
+}
+
+.attendanceStatLabel {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7a8898;
+}
+
+.attendanceActionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.attendanceActionCard {
+  background: #ffffff;
+  border: 1px solid #e6ebf1;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(15, 31, 51, 0.05);
+  padding: 16px;
+  text-align: center;
+}
+
+.attendanceActionTop {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.attendanceActionIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e6ebf1;
+  background: #f6f8fb;
+}
+
+.attendanceActionIcon.in {
+  color: #167a3a;
+  background: rgba(22, 122, 58, 0.08);
+  border-color: rgba(22, 122, 58, 0.18);
+}
+
+.attendanceActionIcon.out {
+  color: #b07200;
+  background: rgba(176, 114, 0, 0.10);
+  border-color: rgba(176, 114, 0, 0.20);
+}
+
+.attendanceTime {
+  font-size: 20px;
+  font-weight: 900;
+  color: #0f1f33;
+  margin-top: 4px;
+}
+
+.attendanceDate {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7a8898;
+}
+
+.attendanceButton {
+  margin-top: 14px;
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.attendanceButton.in {
+  background: #1f9d55;
+  color: white;
+}
+
+.attendanceButton.out {
+  background: #f6d98b;
+  color: #6b4a00;
+  border-color: #f0cc6e;
+}
+
+.attendanceButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.attendanceTableCard {
+  background: #ffffff;
+  border: 1px solid #e6ebf1;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(15, 31, 51, 0.05);
+  margin-top: 14px;
+}
+
+.attendanceTableHeader {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eef2f6;
+}
+
+.attendanceTableTitle {
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f1f33;
+}
+
+.attendanceTableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.attendanceTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.attendanceTable thead th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 800;
+  color: #7a8898;
+  padding: 12px 14px;
+}
+
+.attendanceTable tbody td {
+  padding: 12px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f1f33;
+  border-top: 1px solid #eef2f6;
+}
+
+.attendanceBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+  border: 1px solid transparent;
+}
+
+.attendanceBadge.present {
+  background: #e9f8ef;
+  color: #167a3a;
+  border-color: #c9efd7;
+}
+
+.attendanceBadge.late {
+  background: #fff6e5;
+  color: #9a5a00;
+  border-color: #ffe2b3;
+}
+
+.attendanceBadge.absent {
+  background: #fde8e8;
+  color: #c53030;
+  border-color: #f7c7c7;
+}
+
+@media (max-width: 900px) {
+  .attendanceActionsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .attendancePage {
+    padding: 14px 14px 20px;
+  }
+  .attendanceStats {
+    grid-template-columns: 1fr;
+  }
+}
