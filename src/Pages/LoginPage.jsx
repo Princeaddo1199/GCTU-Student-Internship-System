@@ -1,69 +1,44 @@
+import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import logoImage from "../assets/gctu-logo.png";
 import "./LoginPage.css";
-import Select, { components } from "react-select";
-import { Check, Mail, Lock } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Mail, Lock } from "lucide-react";
+import { useAuth } from "../AuthContext.jsx";
 
-const options = [
-  { value: "Administrator", label: "Administrator" },
-  { value: "Academic Supervisor", label: "Academic Supervisor" },
-  { value: "Industry Supervisor", label: "Industry Supervisor" },
+const credentialsHelp = [
+  "Academic Supervisor: supervisor@gctu.edu / supervisor123",
+  "Student: student@gctu.edu / student123",
 ];
 
-const Option = (props) => (
-  <components.Option {...props}>
-    <span
-      style={{
-        width: 20,
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      {props.isFocused ? <Check size={16} /> : null}
-    </span>
-    {props.label}
-  </components.Option>
-);
-
-const customStyles = {
-  control: (provided, state) => ({
-    ...provided,
-    width: 350,
-    minHeight: 40,
-    height: 45,
-    backgroundColor: "#f3f5f7",
-    boxShadow: "none",
-    border: "1px solid #ccc",
-    outline: "none",
-  }),
-  valueContainer: (provided) => ({
-    ...provided,
-    height: 35,
-    padding: "0 6px",
-    backgroundColor: "#f3f5f7",
-  }),
-  singleValue: (provided) => ({
-    ...provided,
-    margin: 0,
-  }),
-  input: (provided) => ({
-    ...provided,
-    margin: 0,
-    padding: 0,
-  }),
-  indicatorsContainer: (provided) => ({
-    ...provided,
-    height: 40,
-  }),
-  option: (provided, state) => ({
-    ...provided,
-    backgroundColor: state.isFocused ? "#ffc108" : "white",
-    color: "black",
-  }),
-};
 export default function LoginPage() {
+  const auth = useAuth();
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  if (auth.user) {
+    return (
+      <Navigate
+        to={auth.role === "Student" ? "/student-dashboard" : "/dashboard"}
+        replace
+      />
+    );
+  }
+
+  const handleLogin = () => {
+    setError("");
+    const result = auth.login({ email, password });
+
+    if (!result) {
+      setError("Invalid email or password.");
+      return;
+    }
+
+    const destination =
+      result.role === "Student" ? "/student-dashboard" : "/dashboard";
+    navigate(destination);
+  };
 
   return (
     <div className="containerMain">
@@ -83,29 +58,10 @@ export default function LoginPage() {
         >
           Sign in to your account to continue
         </p>
-        <div>
-          <p
-            style={{
-              marginTop: "10px",
-              marginBottom: "5px",
-              fontSize: "13px",
-              fontWeight: "600",
-              color: "#4d4c4c",
-            }}
-          >
-            Select role
-          </p>
-          <Select
-            options={options}
-            styles={customStyles}
-            components={{ Option }}
-            defaultValue={options[1]}
-          />
-        </div>
+
         <div style={{ marginTop: "20px" }}>
           <p
             style={{
-              margingleft: "45px",
               marginBottom: "5px",
               fontSize: "13px",
               fontWeight: "600",
@@ -120,61 +76,61 @@ export default function LoginPage() {
               type="email"
               placeholder="you@live.gctu.edu.gh"
               className="textInput"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
         </div>
+
         <div style={{ marginTop: "20px" }}>
-          <div className="passwordSection">
-            <p
-              style={{
-                margingleft: "45px",
-                marginBottom: "5px",
-                fontSize: "13px",
-                fontWeight: "600",
-                color: "#4d4c4c",
-              }}
-            >
-              Password
-            </p>
-            <span
-              role="button"
-              onClick={() => alert("Forgot password logic")}
-              style={{
-                color: "#4b6b9c",
-                cursor: "pointer",
-                fontSize: "12px",
-                fontWeight: "600",
-                display: "inline-block",
-                marginTop: "4px",
-              }}
-            >
-              Forgot Password?
-            </span>
-          </div>
+          <p
+            style={{
+              marginBottom: "5px",
+              fontSize: "13px",
+              fontWeight: "600",
+              color: "#4d4c4c",
+            }}
+          >
+            Password
+          </p>
           <div className="emailInputContainer">
             <Lock size={18} className="emailIcon" />
             <input
               type="password"
               placeholder="**********"
               className="textInput"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
         </div>
-        <div>
-          <button
-            type="button"
-            onClick={() => navigate("/dashboard")}
-            className="signInButton"
+
+        {error ? (
+          <p style={{ color: "#c53030", marginTop: "12px", fontSize: "13px" }}>
+            {error}
+          </p>
+        ) : (
+          <div
+            style={{ marginTop: "12px", fontSize: "12px", color: "#4d4c4c" }}
           >
+            {credentialsHelp.map((hint) => (
+              <div key={hint}>{hint}</div>
+            ))}
+          </div>
+        )}
+
+        <div>
+          <button type="button" onClick={handleLogin} className="signInButton">
             Sign In
           </button>
         </div>
+
         <div className="requestAccount">
           <div>
-            <span style={{ fontSize: "12px" }}>New supervisor? </span>
+            <span style={{ fontSize: "12px" }}>Need help? </span>
             <span
               role="button"
-              onClick={() => alert("request account logic")}
+              onClick={() => alert("Forgot password logic")}
               style={{
                 color: "#4b6b9c",
                 cursor: "pointer",
