@@ -42,11 +42,16 @@ const studentLinks = [
   { to: "/student-dashboard", label: "Dashboard", Icon: LayoutDashboard },
   { to: "/attendance", label: "Attendance", Icon: CalendarCheck },
   { to: "/activity-logbook", label: "Activity Logbook", Icon: BookOpen },
-  { to: "/documents", label: "Documents", Icon: FileText },
+  { to: "/tasks-attachments", label: "Tasks & Attachments", Icon: FileText },
+  { to: "/student-notifications", label: "Notifications", Icon: Bell },
+  { to: "/internship-report", label: "Internship Report", Icon: FileText },
 ];
 
 export default function Sidebar() {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+  const [isStudentFeedbackOpen, setIsStudentFeedbackOpen] = useState(false);
+  const [isStudentAnalyticsOpen, setIsStudentAnalyticsOpen] = useState(false);
+  const [isStudentInternshipOpen, setIsStudentInternshipOpen] = useState(false);
   const { role, logout } = useAuth();
   const navigate = useNavigate();
 
@@ -77,6 +82,126 @@ export default function Sidebar() {
             {label}
           </NavLink>
         ))}
+
+        {role === "Student" && (
+          <>
+            <div className="navItem">
+              <button
+                type="button"
+                className="navButton"
+                onClick={() => setIsStudentInternshipOpen((v) => !v)}
+              >
+                <Eye className="buttonIcon" />
+                My Internship
+                <span
+                  className={`arrow ${isStudentInternshipOpen ? "open" : ""}`}
+                >
+                  <ChevronRight />
+                </span>
+              </button>
+              {isStudentInternshipOpen && (
+                <ul className="submenu">
+                  <li>
+                    <NavLink
+                      to="/student-my-internship/details"
+                      className="submenuLink"
+                    >
+                      Internship Details
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/student-my-internship/placement"
+                      className="submenuLink"
+                    >
+                      Placement Information
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/student-my-internship/guidelines"
+                      className="submenuLink"
+                    >
+                      Internship Guidelines
+                    </NavLink>
+                  </li>
+                </ul>
+              )}
+            </div>
+
+            <div className="navItem">
+              <button
+                type="button"
+                className="navButton"
+                onClick={() => setIsStudentFeedbackOpen((v) => !v)}
+              >
+                <Star className="buttonIcon" />
+                Supervisor Feedback
+                <span
+                  className={`arrow ${isStudentFeedbackOpen ? "open" : ""}`}
+                >
+                  <ChevronRight />
+                </span>
+              </button>
+              {isStudentFeedbackOpen && (
+                <ul className="submenu">
+                  <li>
+                    <NavLink
+                      to="/student-supervisor-feedback/academic"
+                      className="submenuLink"
+                    >
+                      Academic Supervisor
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/student-supervisor-feedback/industry"
+                      className="submenuLink"
+                    >
+                      Industry Supervisor
+                    </NavLink>
+                  </li>
+                </ul>
+              )}
+            </div>
+
+            <div className="navItem">
+              <button
+                type="button"
+                className="navButton"
+                onClick={() => setIsStudentAnalyticsOpen((v) => !v)}
+              >
+                <ChartColumn className="buttonIcon" />
+                Performance Analytics
+                <span
+                  className={`arrow ${isStudentAnalyticsOpen ? "open" : ""}`}
+                >
+                  <ChevronRight />
+                </span>
+              </button>
+              {isStudentAnalyticsOpen && (
+                <ul className="submenu">
+                  <li>
+                    <NavLink
+                      to="/student-performance-analytics/score"
+                      className="submenuLink"
+                    >
+                      Performance Score
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/student-performance-analytics/progress"
+                      className="submenuLink"
+                    >
+                      Progress Tracker
+                    </NavLink>
+                  </li>
+                </ul>
+              )}
+            </div>
+          </>
+        )}
 
         {role !== "Student" && (
           <>

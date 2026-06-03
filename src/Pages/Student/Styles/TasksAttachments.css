@@ -1,0 +1,224 @@
+.tasksPage {
+  padding: 18px 22px 26px;
+}
+
+.tasksHeader {
+  margin-bottom: 12px;
+}
+
+.tasksTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 900;
+  color: #0f1f33;
+}
+
+.tasksSubtitle {
+  margin: 6px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #5f6f82;
+}
+
+.tasksTabs {
+  display: inline-flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tasksTab {
+  appearance: none;
+  border: 1px solid #e6ebf1;
+  background: #ffffff;
+  color: #5f6f82;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.tasksTab.active {
+  background: #11325f;
+  border-color: #11325f;
+  color: #ffffff;
+}
+
+.tasksDropzoneCard {
+  margin-top: 12px;
+  background: #ffffff;
+  border: 1px solid #e6ebf1;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(15, 31, 51, 0.05);
+  padding: 14px;
+}
+
+.tasksDropzone {
+  border: 2px dashed #dbe3ec;
+  border-radius: 12px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #fbfcfe;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tasksUploadIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5fb;
+  color: #11325f;
+  border: 1px solid #e6ebf1;
+}
+
+.tasksDropTitle {
+  font-size: 12px;
+  font-weight: 900;
+  color: #0f1f33;
+}
+
+.tasksDropHint {
+  font-size: 11px;
+  font-weight: 700;
+  color: #7a8898;
+}
+
+.tasksSubmitBtn {
+  margin-top: 12px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #e6ebf1;
+  background: #11325f;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.tasksViewNotice {
+  font-size: 12px;
+  font-weight: 700;
+  color: #5f6f82;
+}
+
+.tasksRecentCard {
+  margin-top: 12px;
+  background: #ffffff;
+  border: 1px solid #e6ebf1;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(15, 31, 51, 0.05);
+}
+
+.tasksRecentHeader {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eef2f6;
+  font-size: 13px;
+  font-weight: 900;
+  color: #0f1f33;
+}
+
+.tasksRecentList {
+  padding: 4px 14px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tasksRecentItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid #eef2f6;
+}
+
+.tasksRecentItem:first-child {
+  border-top: none;
+}
+
+.tasksRecentLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.tasksFileIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f8fb;
+  border: 1px solid #e6ebf1;
+  color: #11325f;
+  flex: 0 0 auto;
+}
+
+.tasksFileMeta {
+  min-width: 0;
+}
+
+.tasksFileName {
+  font-size: 12px;
+  font-weight: 900;
+  color: #0f1f33;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 520px;
+}
+
+.tasksFileSub {
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #7a8898;
+}
+
+.tasksBadge {
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.tasksBadge.submitted {
+  background: #e9f8ef;
+  color: #167a3a;
+  border-color: #c9efd7;
+}
+
+.tasksBadge.draft {
+  background: #eef2f6;
+  color: #5f6f82;
+  border-color: #e6ebf1;
+}
+
+@media (max-width: 640px) {
+  .tasksPage {
+    padding: 14px 14px 20px;
+  }
+  .tasksFileName {
+    max-width: 240px;
+  }
+}
+

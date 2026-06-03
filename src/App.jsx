@@ -22,6 +22,16 @@ import StudentDashboard from "./Pages/Student/Pages/StudentDashboard";
 import Attendance from "./Pages/Student/Pages/Attendance";
 import ActivityLogbook from "./Pages/Student/Pages/ActivityLogbook";
 import Documents from "./Pages/Student/Pages/Documents";
+import TasksAttachments from "./Pages/Student/Pages/TasksAttachments";
+import StudentNotifications from "./Pages/Student/Pages/StudentNotifications";
+import InternshipReport from "./Pages/Student/Pages/InternshipReport";
+import AcademicSupervisor from "./Pages/Student/Pages/AcademicSupervisor";
+import IndustrySupervisor from "./Pages/Student/Pages/IndustrySupervisor";
+import PerformanceScore from "./Pages/Student/Pages/PerformanceScore";
+import ProgressTracker from "./Pages/Student/Pages/ProgressTracker";
+import InternshipDetails from "./Pages/Student/Pages/InternshipDetails";
+import PlacementInformation from "./Pages/Student/Pages/PlacementInformation";
+import InternshipGuidelines from "./Pages/Student/Pages/InternshipGuidelines";
 
 function MainLayout({ children }) {
   return (
@@ -220,6 +230,106 @@ function App() {
           <RequireAuth allowedRoles={["Student"]}>
             <MainLayout>
               <Documents />
+            </MainLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/tasks-attachments"
+        element={
+          <RequireAuth allowedRoles={["Student"]}>
+            <MainLayout>
+              <TasksAttachments />
+            </MainLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/student-notifications"
+        element={
+          <RequireAuth allowedRoles={["Student"]}>
+            <MainLayout>
+              <StudentNotifications />
+            </MainLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/internship-report"
+        element={
+          <RequireAuth allowedRoles={["Student"]}>
+            <MainLayout>
+              <InternshipReport />
+            </MainLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/student-supervisor-feedback/academic"
+        element={
+          <RequireAuth allowedRoles={["Student"]}>
+            <MainLayout>
+              <AcademicSupervisor />
+            </MainLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/student-supervisor-feedback/industry"
+        element={
+          <RequireAuth allowedRoles={["Student"]}>
+            <MainLayout>
+              <IndustrySupervisor />
+            </MainLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/student-performance-analytics/score"
+        element={
+          <RequireAuth allowedRoles={["Student"]}>
+            <MainLayout>
+              <PerformanceScore />
+            </MainLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/student-performance-analytics/progress"
+        element={
+          <RequireAuth allowedRoles={["Student"]}>
+            <MainLayout>
+              <ProgressTracker />
+            </MainLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/student-my-internship/details"
+        element={
+          <RequireAuth allowedRoles={["Student"]}>
+            <MainLayout>
+              <InternshipDetails />
+            </MainLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/student-my-internship/placement"
+        element={
+          <RequireAuth allowedRoles={["Student"]}>
+            <MainLayout>
+              <PlacementInformation />
+            </MainLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/student-my-internship/guidelines"
+        element={
+          <RequireAuth allowedRoles={["Student"]}>
+            <MainLayout>
+              <InternshipGuidelines />
             </MainLayout>
           </RequireAuth>
         }
