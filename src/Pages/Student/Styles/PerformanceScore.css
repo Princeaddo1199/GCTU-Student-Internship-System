@@ -1,0 +1,217 @@
+/* Style variables matching GCTU SIS design tokens */
+:root {
+  --primary-color: #11325f;
+  --text-dark: #0f1f33;
+  --text-muted: #5f6f82;
+  --border-color: #e6ebf1;
+  --bg-light: #f6f8fb;
+  --bg-card: #ffffff;
+  --accent-gold: #f0a214;
+}
+
+.performanceScorePage {
+  padding: 24px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scoreHeader {
+  margin-bottom: 24px;
+}
+
+.scoreHeader h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.scoreSubtitle {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Page layout split */
+.scoreCardsGrid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .scoreCardsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.scoreCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 30px 24px;
+  box-shadow: 0 2px 4px rgba(15, 31, 51, 0.02);
+  transition: all 0.25s ease;
+}
+
+.scoreCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 31, 51, 0.05);
+  border-color: #c9d2de;
+}
+
+/* Left Card: Overall Score Radial */
+.overallScoreCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 340px;
+}
+
+.radialProgressContainer {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.radialBgRing {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid var(--bg-light);
+  box-sizing: border-box;
+}
+
+.radialActiveRing {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid transparent;
+  border-top-color: var(--accent-gold);
+  border-right-color: var(--accent-gold);
+  border-bottom-color: var(--accent-gold);
+  transform: rotate(-45deg); /* Displays around 86% arc visually */
+  box-sizing: border-box;
+}
+
+.radialValueText {
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--accent-gold);
+  z-index: 2;
+}
+
+.overallScoreLabel {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.overallScoreSubtext {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Right Card: Breakdown Category Progress List */
+.breakdownCard {
+  min-height: 340px;
+}
+
+.breakdownTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.breakdownTitleRow h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.breakdownIcon {
+  color: var(--accent-gold);
+}
+
+.categoriesList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.categoryRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.categoryName {
+  width: 160px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .categoryRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .categoryName {
+    width: 100%;
+  }
+}
+
+.progressBarContainer {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-light);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 4px;
+  width: 0; /* Animated dynamically on mount */
+  transition: width 1s cubic-bezier(0.1, 0.76, 0.55, 0.94);
+}
+
+.categoryPercentage {
+  width: 40px;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--text-dark);
+  text-align: right;
+  flex-shrink: 0;
+}

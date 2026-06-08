@@ -32,6 +32,9 @@ import ProgressTracker from "./Pages/Student/Pages/ProgressTracker";
 import InternshipDetails from "./Pages/Student/Pages/InternshipDetails";
 import PlacementInformation from "./Pages/Student/Pages/PlacementInformation";
 import InternshipGuidelines from "./Pages/Student/Pages/InternshipGuidelines";
+import PersonalInformation from "./Pages/Student/Pages/PersonalInformation";
+import InternshipInformation from "./Pages/Student/Pages/InternshipInformation";
+import ChangePassword from "./Pages/Student/Pages/ChangePassword";
 
 function MainLayout({ children }) {
   return (
@@ -330,6 +333,36 @@ function App() {
           <RequireAuth allowedRoles={["Student"]}>
             <MainLayout>
               <InternshipGuidelines />
+            </MainLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/student-profile/personal-info"
+        element={
+          <RequireAuth allowedRoles={["Student"]}>
+            <MainLayout>
+              <PersonalInformation />
+            </MainLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/student-profile/internship-info"
+        element={
+          <RequireAuth allowedRoles={["Student"]}>
+            <MainLayout>
+              <InternshipInformation />
+            </MainLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/student-profile/change-password"
+        element={
+          <RequireAuth allowedRoles={["Student"]}>
+            <MainLayout>
+              <ChangePassword />
             </MainLayout>
           </RequireAuth>
         }

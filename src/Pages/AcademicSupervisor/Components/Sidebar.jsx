@@ -38,20 +38,12 @@ const supervisorLinks = [
   { to: "/industry-reports", label: "Industry Reports", Icon: FileText },
 ];
 
-const studentLinks = [
-  { to: "/student-dashboard", label: "Dashboard", Icon: LayoutDashboard },
-  { to: "/attendance", label: "Attendance", Icon: CalendarCheck },
-  { to: "/activity-logbook", label: "Activity Logbook", Icon: BookOpen },
-  { to: "/tasks-attachments", label: "Tasks & Attachments", Icon: FileText },
-  { to: "/student-notifications", label: "Notifications", Icon: Bell },
-  { to: "/internship-report", label: "Internship Report", Icon: FileText },
-];
-
 export default function Sidebar() {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [isStudentFeedbackOpen, setIsStudentFeedbackOpen] = useState(false);
   const [isStudentAnalyticsOpen, setIsStudentAnalyticsOpen] = useState(false);
   const [isStudentInternshipOpen, setIsStudentInternshipOpen] = useState(false);
+  const [isStudentProfileOpen, setIsStudentProfileOpen] = useState(false);
   const { role, logout } = useAuth();
   const navigate = useNavigate();
 
@@ -64,8 +56,6 @@ export default function Sidebar() {
     return null;
   }
 
-  const links = role === "Student" ? studentLinks : supervisorLinks;
-
   return (
     <div className="sidebarLayoutMain">
       <div className="logo">
@@ -76,23 +66,25 @@ export default function Sidebar() {
         </div>
       </div>
       <nav className="sidebarNav">
-        {links.map(({ to, label, Icon }) => (
-          <NavLink key={to} to={to} className="navLink">
-            <Icon className="navIcon" />
-            {label}
-          </NavLink>
-        ))}
-
-        {role === "Student" && (
+        {role === "Student" ? (
           <>
+            {/* 1. Dashboard */}
+            <NavLink to="/student-dashboard" className="navLink">
+              <LayoutDashboard className="navIcon" />
+              Dashboard
+            </NavLink>
+
+            {/* 2. My Internship */}
             <div className="navItem">
               <button
                 type="button"
                 className="navButton"
                 onClick={() => setIsStudentInternshipOpen((v) => !v)}
               >
-                <Eye className="buttonIcon" />
-                My Internship
+                <span className="navButtonText">
+                  <Eye className="buttonIcon" />
+                  My Internship
+                </span>
                 <span
                   className={`arrow ${isStudentInternshipOpen ? "open" : ""}`}
                 >
@@ -129,14 +121,35 @@ export default function Sidebar() {
               )}
             </div>
 
+            {/* 3. Activity Logbook */}
+            <NavLink to="/activity-logbook" className="navLink">
+              <BookOpen className="navIcon" />
+              Activity Logbook
+            </NavLink>
+
+            {/* 4. Tasks and Attachments */}
+            <NavLink to="/tasks-attachments" className="navLink">
+              <FileText className="navIcon" />
+              Tasks & Attachments
+            </NavLink>
+
+            {/* 5. Attendance */}
+            <NavLink to="/attendance" className="navLink">
+              <CalendarCheck className="navIcon" />
+              Attendance
+            </NavLink>
+
+            {/* 6. Supervisor Feedback */}
             <div className="navItem">
               <button
                 type="button"
                 className="navButton"
                 onClick={() => setIsStudentFeedbackOpen((v) => !v)}
               >
-                <Star className="buttonIcon" />
-                Supervisor Feedback
+                <span className="navButtonText">
+                  <Star className="buttonIcon" />
+                  Supervisor Feedback
+                </span>
                 <span
                   className={`arrow ${isStudentFeedbackOpen ? "open" : ""}`}
                 >
@@ -165,14 +178,17 @@ export default function Sidebar() {
               )}
             </div>
 
+            {/* 7. Performance Analytics */}
             <div className="navItem">
               <button
                 type="button"
                 className="navButton"
                 onClick={() => setIsStudentAnalyticsOpen((v) => !v)}
               >
-                <ChartColumn className="buttonIcon" />
-                Performance Analytics
+                <span className="navButtonText">
+                  <ChartColumn className="buttonIcon" />
+                  Performance Analytics
+                </span>
                 <span
                   className={`arrow ${isStudentAnalyticsOpen ? "open" : ""}`}
                 >
@@ -200,18 +216,84 @@ export default function Sidebar() {
                 </ul>
               )}
             </div>
-          </>
-        )}
 
-        {role !== "Student" && (
-          <>
+            {/* 8. Notifications */}
+            <NavLink to="/student-notifications" className="navLink">
+              <Bell className="navIcon" />
+              Notifications
+            </NavLink>
+
+            {/* 9. Internship Report */}
+            <NavLink to="/internship-report" className="navLink">
+              <FileText className="navIcon" />
+              Internship Report
+            </NavLink>
+
+            {/* Profile Dropdown */}
             <div className="navItem">
               <button
+                type="button"
+                className="navButton"
+                onClick={() => setIsStudentProfileOpen((v) => !v)}
+              >
+                <span className="navButtonText">
+                  <User className="buttonIcon" />
+                  Profile
+                </span>
+                <span className={`arrow ${isStudentProfileOpen ? "open" : ""}`}>
+                  <ChevronRight />
+                </span>
+              </button>
+              {isStudentProfileOpen && (
+                <ul className="submenu">
+                  <li>
+                    <NavLink
+                      to="/student-profile/personal-info"
+                      className="submenuLink"
+                    >
+                      Personal Information
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/student-profile/internship-info"
+                      className="submenuLink"
+                    >
+                      Internship Information
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/student-profile/change-password"
+                      className="submenuLink"
+                    >
+                      Change Password
+                    </NavLink>
+                  </li>
+                </ul>
+              )}
+            </div>
+          </>
+        ) : (
+          <>
+            {/* Supervisor routes mapping */}
+            {supervisorLinks.map(({ to, label, Icon }) => (
+              <NavLink key={to} to={to} className="navLink">
+                <Icon className="navIcon" />
+                {label}
+              </NavLink>
+            ))}
+
+            <div className="navItem">
+              <button
+                type="button"
                 className="navButton"
                 onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
               >
-                <MapPin className="buttonIcon" />
-                Visit Reports
+                <span className="navButtonText">
+                  <MapPin className="buttonIcon" />
+                  Visit Reports
+                </span>
                 <span className={`arrow ${isSubmenuOpen ? "open" : ""}`}>
                   <ChevronRight />
                 </span>
@@ -250,6 +332,7 @@ export default function Sidebar() {
           </>
         )}
 
+        {/* 10. Logout */}
         <button
           type="button"
           className="navButton logoutButton"

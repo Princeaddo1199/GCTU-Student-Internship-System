@@ -72,6 +72,12 @@ a.active {
   background-color: #34495e;
 }
 
+.navButtonText {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .buttonIcon {
   margin-right: 0;
 }
