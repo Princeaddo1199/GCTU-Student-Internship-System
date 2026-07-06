@@ -1,51 +1,80 @@
 .sidebarLayoutMain {
   width: 250px;
   background-color: #142339;
-  color: white;
+  color: #cbd5e1;
   height: 100vh;
   position: sticky;
   top: 0;
   overflow-y: auto;
+  font-family: inherit;
 }
+
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 10px 10px;
-  padding: 10px 0;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 18px 16px 14px;
   gap: 10px;
-  border-bottom: 1px solid #47636e;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+}
+
+.sidebarRole {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
 }
 
 .sidebarNav {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
+  padding: 10px 10px 16px;
 }
 
 .navLink {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 12px 15px;
-  color: white;
+  padding: 10px 12px;
+  color: #ffffff;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
   transition:
-    background-color 0.1s ease,
-    color 0.1s ease;
+    background-color 0.15s ease,
+    color 0.15s ease;
 }
+
 .navIcon {
   margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  stroke-width: 1.75;
 }
 
 .navLink:hover {
-  background-color: #34495e;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
 }
 
-a.active {
-  color: #ffe600;
-  background-color: #34495e;
+.navLink.active {
+  color: #ffd021;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
 }
 
 .navItem {
@@ -54,22 +83,27 @@ a.active {
 
 .navButton {
   width: 100%;
-  padding: 12px 15px;
+  padding: 10px 12px;
   background-color: transparent;
   border: none;
-  color: white;
+  color: #cbd5e1;
   text-align: left;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .navButton:hover {
-  background-color: #34495e;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
 }
 
 .navButtonText {
@@ -79,13 +113,23 @@ a.active {
 }
 
 .buttonIcon {
-  margin-right: 0;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  stroke-width: 1.75;
 }
 
 .arrow {
-  display: inline-block;
-  transition: transform 0.3s ease;
-  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  color: #94a3b8;
+}
+
+.arrow svg {
+  width: 14px;
+  height: 14px;
 }
 
 .arrow.open {
@@ -94,9 +138,9 @@ a.active {
 
 .submenu {
   list-style: none;
-  padding: 8px 0;
-  margin: 5px 0 5px 20px;
-  border-left: 1px solid #3498db;
+  padding: 4px 0 4px 12px;
+  margin: 2px 0 2px 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .submenu li {
@@ -105,15 +149,36 @@ a.active {
 
 .submenuLink {
   display: block;
-  padding: 10px 15px 10px 25px;
-  color: white;
+  padding: 8px 12px;
+  color: #94a3b8;
   text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
   transition:
-    background-color 0.3s ease,
-    padding-left 0.3s ease;
+    background-color 0.15s ease,
+    color 0.15s ease;
 }
 
 .submenuLink:hover {
-  background-color: #34495e;
-  padding-left: 35px;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.submenuLink.active {
+  color: #ffd021;
+  background-color: rgba(255, 255, 255, 0.08);
+  font-weight: 600;
+}
+
+.logoutButton {
+  margin-top: 8px;
+  color: #ef4444 !important;
+  font-weight: 600;
+  justify-content: flex-start;
+}
+
+.logoutButton:hover {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+  color: #f87171 !important;
 }

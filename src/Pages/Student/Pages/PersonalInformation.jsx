@@ -1,24 +1,43 @@
 import React, { useState } from "react";
 import "../Styles/PersonalInformation.css";
-import { User, Mail, Phone, Building2, Check, Sparkles } from "lucide-react";
+import { User, Mail, Phone, Building2, Lock, Sparkles } from "lucide-react";
 
 export default function PersonalInformation() {
   const [fullName, setFullName] = useState("Akosua Kwarteng");
   const [email, setEmail] = useState("a.kwarteng@university.edu");
   const [phone, setPhone] = useState("+233 24 123 4567");
   const [department, setDepartment] = useState("Computer Science");
-  
-  // Notification toast state
+  const [currentPassword, setCurrentPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
   const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Simulate API update
+    setToastMessage("Changes saved successfully!");
     setShowToast(true);
-    setTimeout(() => {
-      setShowToast(false);
-    }, 3000);
+    setTimeout(() => setShowToast(false), 3000);
+  };
+
+  const handlePasswordSubmit = (e) => {
+    e.preventDefault();
+
+    if (newPassword !== confirmPassword) {
+      setToastMessage("New passwords do not match.");
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
+      return;
+    }
+
+    setToastMessage("Password updated successfully!");
+    setCurrentPassword("");
+    setNewPassword("");
+    setConfirmPassword("");
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 3000);
   };
 
   // Get initials for profile bubble
@@ -68,6 +87,7 @@ export default function PersonalInformation() {
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
                 required
+                disabled
               />
             </div>
 
@@ -84,6 +104,7 @@ export default function PersonalInformation() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                disabled
               />
             </div>
 
@@ -100,6 +121,7 @@ export default function PersonalInformation() {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required
+                disabled
               />
             </div>
 
@@ -116,6 +138,7 @@ export default function PersonalInformation() {
                 value={department}
                 onChange={(e) => setDepartment(e.target.value)}
                 required
+                disabled
               />
             </div>
           </div>
@@ -127,11 +150,75 @@ export default function PersonalInformation() {
         </form>
       </div>
 
-      {/* Success Toast */}
+      <div className="changePasswordSection">
+        <div className="changePasswordHeader">
+          <h2>Change Password</h2>
+          <p className="changePasswordSubtitle">Update your account password</p>
+        </div>
+
+        <div className="personalInfoCard">
+          <form onSubmit={handlePasswordSubmit}>
+            <div className="passwordFieldsStack">
+              <div className="formFieldGroup">
+                <div className="formFieldLabelRow">
+                  <Lock size={14} />
+                  <label htmlFor="currentPassword">Current Password</label>
+                </div>
+                <input
+                  type="password"
+                  id="currentPassword"
+                  className="formInput"
+                  value={currentPassword}
+                  onChange={(e) => setCurrentPassword(e.target.value)}
+                  placeholder="Enter current password"
+                  required
+                />
+              </div>
+
+              <div className="formFieldGroup">
+                <div className="formFieldLabelRow">
+                  <Lock size={14} />
+                  <label htmlFor="newPassword">New Password</label>
+                </div>
+                <input
+                  type="password"
+                  id="newPassword"
+                  className="formInput"
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                  placeholder="Enter new password"
+                  required
+                />
+              </div>
+
+              <div className="formFieldGroup">
+                <div className="formFieldLabelRow">
+                  <Lock size={14} />
+                  <label htmlFor="confirmPassword">Confirm New Password</label>
+                </div>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  className="formInput"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  placeholder="Confirm new password"
+                  required
+                />
+              </div>
+            </div>
+
+            <button type="submit" className="saveChangesBtn">
+              Update Password
+            </button>
+          </form>
+        </div>
+      </div>
+
       {showToast && (
         <div className="successToast">
           <Sparkles size={16} />
-          <span>Changes saved successfully!</span>
+          <span>{toastMessage}</span>
         </div>
       )}
     </div>
