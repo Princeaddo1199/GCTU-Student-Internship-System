@@ -1,0 +1,123 @@
+/* ===== Supervisor Performance Page ===== */
+.supervisorPerformance {
+  padding: 24px 32px;
+  background-color: #f3f5f7;
+  min-height: 100vh;
+}
+
+/* Header */
+.performanceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.performanceTitle h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+
+.performanceTitle p {
+  font-size: 13px;
+  color: #8894a2;
+  margin: 0;
+}
+
+/* ===== Performance Card Section ===== */
+.performanceCardSection {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.performanceCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.performanceCardHeader h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.performanceTableControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.performanceSearchInput {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 14px;
+  width: 220px;
+  transition: border-color 0.2s ease;
+}
+
+.performanceSearchInput:focus-within {
+  border-color: #3b82f6;
+  background: #fff;
+}
+
+.performanceSearchInput input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  color: #334155;
+  width: 100%;
+}
+
+.performanceSearchInput input::placeholder {
+  color: #94a3b8;
+}
+
+.filterBtn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* Rating Pill */
+.ratingBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.ratingIcon {
+  color: #f59e0b;
+}
+
+/* Visits count text */
+.visitsCountText {
+  color: #475569;
+  font-weight: 500;
+}

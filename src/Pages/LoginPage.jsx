@@ -8,7 +8,14 @@ import { useAuth } from "../AuthContext.jsx";
 const credentialsHelp = [
   "Academic Supervisor: supervisor@gctu.edu / supervisor123",
   "Student: student@gctu.edu / student123",
+  "Administrator: admin@gctu.edu / admin123",
 ];
+
+function getHomePath(role) {
+  if (role === "Student") return "/student-dashboard";
+  if (role === "Administrator") return "/admin-dashboard";
+  return "/dashboard";
+}
 
 export default function LoginPage() {
   const auth = useAuth();
@@ -18,12 +25,7 @@ export default function LoginPage() {
   const [error, setError] = useState("");
 
   if (auth.user) {
-    return (
-      <Navigate
-        to={auth.role === "Student" ? "/student-dashboard" : "/dashboard"}
-        replace
-      />
-    );
+    return <Navigate to={getHomePath(auth.role)} replace />;
   }
 
   const handleLogin = () => {
@@ -35,9 +37,7 @@ export default function LoginPage() {
       return;
     }
 
-    const destination =
-      result.role === "Student" ? "/student-dashboard" : "/dashboard";
-    navigate(destination);
+    navigate(getHomePath(result.role));
   };
 
   return (

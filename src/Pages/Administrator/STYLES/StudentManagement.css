@@ -1,0 +1,475 @@
+/* ===== Student Management Page ===== */
+.studentMgmt {
+  padding: 24px 32px;
+  background-color: #f3f5f7;
+  min-height: 100vh;
+}
+
+/* Header */
+.studentMgmtHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.studentMgmtTitle h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+
+.studentMgmtTitle p {
+  font-size: 13px;
+  color: #8894a2;
+  margin: 0;
+}
+
+.studentMgmtActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exportBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.exportBtn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.addStudentBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #142339;
+  color: #fff;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.addStudentBtn:hover {
+  background-color: #1e3a5f;
+  transform: translateY(-1px);
+}
+
+/* ===== Stat Cards ===== */
+.studentMgmtStatCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.studentMgmtStatCard {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.studentMgmtStatCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.smStatInfo h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 4px 0;
+}
+
+.smStatInfo p {
+  font-size: 12px;
+  color: #8894a2;
+  margin: 0;
+}
+
+.smStatInfo .smStatLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.smStatInfo .smStatSub {
+  font-size: 11px;
+  font-weight: 500;
+  color: #16a34a;
+  margin-top: 2px;
+}
+
+.smStatIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smStatIcon.blue {
+  background-color: #eff6ff;
+  color: #3b82f6;
+}
+
+.smStatIcon.green {
+  background-color: #f0fdf4;
+  color: #22c55e;
+}
+
+.smStatIcon.red {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+.smStatIcon.purple {
+  background-color: #faf5ff;
+  color: #a855f7;
+}
+
+/* ===== All Students Section ===== */
+.studentMgmtTableSection {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.studentMgmtTableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.studentMgmtTableHeader h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.studentMgmtTableControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.studentSearchInput {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 14px;
+  width: 220px;
+  transition: border-color 0.2s ease;
+}
+
+.studentSearchInput:focus-within {
+  border-color: #3b82f6;
+  background: #fff;
+}
+
+.studentSearchInput input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  color: #334155;
+  width: 100%;
+}
+
+.studentSearchInput input::placeholder {
+  color: #94a3b8;
+}
+
+.filterBtn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* ===== Students Table ===== */
+.studentMgmtTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.studentMgmtTable th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e2e8f0;
+  text-transform: capitalize;
+}
+
+.studentMgmtTable td {
+  padding: 14px;
+  font-size: 13px;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.studentMgmtTable tr:last-child td {
+  border-bottom: none;
+}
+
+.studentMgmtTable tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.studentMgmtTable tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Student Cell with Avatar */
+.studentCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 100%;
+  width: 100%;
+  line-height: normal;
+}
+
+.studentAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.studentAvatar.bg1 { background-color: #142339; }
+.studentAvatar.bg2 { background-color: #3b82f6; }
+.studentAvatar.bg3 { background-color: #f59e0b; }
+.studentAvatar.bg4 { background-color: #22c55e; }
+.studentAvatar.bg5 { background-color: #8b5cf6; }
+.studentAvatar.bg6 { background-color: #ef4444; }
+.studentAvatar.bg7 { background-color: #06b6d4; }
+.studentAvatar.bg8 { background-color: #e11d48; }
+
+.studentNameGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: normal;
+}
+
+.studentNameText {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.studentIdText {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 1px;
+}
+
+/* Company link color */
+.companyLink {
+  color: #3b82f6;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.companyLink:hover {
+  text-decoration: underline;
+}
+
+/* Progress Cell */
+.progressCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 120px;
+}
+
+.progressBarTrack {
+  flex: 1;
+  height: 6px;
+  background-color: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+  min-width: 60px;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.progressBarFill.high {
+  background: linear-gradient(90deg, #142339, #1e3a5f);
+}
+
+.progressBarFill.medium {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+.progressBarFill.low {
+  background: linear-gradient(90deg, #94a3b8, #cbd5e1);
+}
+
+.progressPercent {
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+  min-width: 32px;
+  text-align: right;
+}
+
+/* Status Badges */
+.smStatusBadge {
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+}
+
+.smStatusBadge.active {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.smStatusBadge.pending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.smStatusBadge.atRisk {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+.smStatusBadge.completed {
+  background-color: #eff6ff;
+  color: #3b82f6;
+}
+
+/* Actions Button */
+.actionsBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.actionsBtn:hover {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+/* ===== Pagination ===== */
+.studentMgmtPagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.paginationInfo {
+  font-size: 13px;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.paginationControls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.paginationBtn {
+  padding: 6px 14px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #64748b;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.paginationBtn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.paginationBtn.pageNum {
+  min-width: 34px;
+  text-align: center;
+  padding: 6px 10px;
+}
+
+.paginationBtn.pageNum.activePage {
+  background-color: #142339;
+  color: #fff;
+  border-color: #142339;
+}
+
+.paginationBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

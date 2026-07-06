@@ -1,0 +1,176 @@
+/* ===== Company Management Page ===== */
+.companyManagement {
+  padding: 24px 32px;
+  background-color: #f3f5f7;
+  min-height: 100vh;
+}
+
+/* Header */
+.companyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.companyTitle h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+
+.companyTitle p {
+  font-size: 13px;
+  color: #8894a2;
+  margin: 0;
+}
+
+.exportCompanyBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.exportCompanyBtn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* ===== Table Card ===== */
+.companyTableCard {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.companyTableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.companyTableHeader h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.companyTableControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.companySearchInput {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 14px;
+  width: 220px;
+  transition: border-color 0.2s ease;
+}
+
+.companySearchInput:focus-within {
+  border-color: #3b82f6;
+  background: #fff;
+}
+
+.companySearchInput input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  color: #334155;
+  width: 100%;
+}
+
+.companySearchInput input::placeholder {
+  color: #94a3b8;
+}
+
+/* Company Cell with building icon */
+.companyCellContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 100%;
+  width: 100%;
+  line-height: normal;
+}
+
+.companyIconBox {
+  width: 36px;
+  height: 36px;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e3a5f;
+  flex-shrink: 0;
+}
+
+.companyNameGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.companyNameText {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.companyEmailText {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 1px;
+}
+
+/* Location group */
+.locationGroup {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #64748b;
+}
+
+/* View Link/Action Column */
+.viewActionLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.viewActionLink:hover {
+  color: #1e3a5f;
+  background: #f1f5f9;
+}

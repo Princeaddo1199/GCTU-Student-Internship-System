@@ -16,6 +16,12 @@ const mockUsers = [
     role: "Student",
     name: "Student User",
   },
+  {
+    email: "admin@gctu.edu",
+    password: "admin123",
+    role: "Administrator",
+    name: "Dr. Kwame Asante",
+  },
 ];
 
 const storageKey = "gctu-sis-auth";

@@ -35,6 +35,13 @@ import InternshipGuidelines from "./Pages/Student/Pages/InternshipGuidelines";
 import PersonalInformation from "./Pages/Student/Pages/PersonalInformation";
 import InternshipInformation from "./Pages/Student/Pages/InternshipInformation";
 import ChangePassword from "./Pages/Student/Pages/ChangePassword";
+import AdminSidebar from "./Pages/Administrator/Components/AdminSidebar";
+import AdminSearchbar from "./Pages/Administrator/Components/AdminSearchbar";
+import AdminDashboard from "./Pages/Administrator/Pages/AdminDashboard";
+import StudentManagement from "./Pages/Administrator/Pages/StudentManagement";
+import AcademicSupervisors from "./Pages/Administrator/Pages/AcademicSupervisors";
+import AssignSupervisors from "./Pages/Administrator/Pages/AssignSupervisors";
+import SupervisorPerformance from "./Pages/Administrator/Pages/SupervisorPerformance";
 
 function MainLayout({ children }) {
   return (
@@ -42,6 +49,18 @@ function MainLayout({ children }) {
       <Sidebar />
       <main className="mainContent" style={{ flex: 1 }}>
         <Searchbar />
+        {children}
+      </main>
+    </div>
+  );
+}
+
+function AdminLayout({ children }) {
+  return (
+    <div className="mainLayout">
+      <AdminSidebar />
+      <main className="mainContent" style={{ flex: 1 }}>
+        <AdminSearchbar />
         {children}
       </main>
     </div>
@@ -364,6 +383,58 @@ function App() {
             <MainLayout>
               <ChangePassword />
             </MainLayout>
+          </RequireAuth>
+        }
+      />
+
+      {/* Administrator routes */}
+      <Route
+        path="/admin-dashboard"
+        element={
+          <RequireAuth allowedRoles={["Administrator"]}>
+            <AdminLayout>
+              <AdminDashboard />
+            </AdminLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/admin-students-management"
+        element={
+          <RequireAuth allowedRoles={["Administrator"]}>
+            <AdminLayout>
+              <StudentManagement />
+            </AdminLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/admin-academic-supervisors"
+        element={
+          <RequireAuth allowedRoles={["Administrator"]}>
+            <AdminLayout>
+              <AcademicSupervisors />
+            </AdminLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/admin-assign-supervisors"
+        element={
+          <RequireAuth allowedRoles={["Administrator"]}>
+            <AdminLayout>
+              <AssignSupervisors />
+            </AdminLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/admin-supervisor-performance"
+        element={
+          <RequireAuth allowedRoles={["Administrator"]}>
+            <AdminLayout>
+              <SupervisorPerformance />
+            </AdminLayout>
           </RequireAuth>
         }
       />
