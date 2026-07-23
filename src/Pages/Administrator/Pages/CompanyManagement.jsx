@@ -12,79 +12,18 @@ import {
 } from "lucide-react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Box } from "@mui/material";
+import industrySupervisors from "../../../Data/industrySupervisors.json";
 
-const initialCompanies = [
-  {
-    id: 1,
-    name: "TechCorp Ghana",
-    email: "info@techcorp.gh",
-    industry: "Technology",
-    location: "Accra",
-    contact: "Michael Osei",
-    internsCount: 3,
-    status: "Active",
-  },
-  {
-    id: 2,
-    name: "DataFlow Inc",
-    email: "hr@dataflow.com",
-    industry: "Data Analytics",
-    location: "Kumasi",
-    contact: "Sarah Mensah",
-    internsCount: 2,
-    status: "Active",
-  },
-  {
-    id: 3,
-    name: "InnoTech Ltd",
-    email: "recruit@innotech.com",
-    industry: "Software",
-    location: "Accra",
-    contact: "James Owusu",
-    internsCount: 1,
-    status: "Active",
-  },
-  {
-    id: 4,
-    name: "MTN Group",
-    email: "intern@mtn.com.gh",
-    industry: "Telecom",
-    location: "Accra",
-    contact: "Grace Appiah",
-    internsCount: 4,
-    status: "Active",
-  },
-  {
-    id: 5,
-    name: "Vodafone Ghana",
-    email: "hr@vodafone.com.gh",
-    industry: "Telecom",
-    location: "Accra",
-    contact: "Peter Yeboah",
-    internsCount: 0,
-    status: "Inactive",
-  },
-  {
-    id: 6,
-    name: "Hubtel",
-    email: "careers@hubtel.com",
-    industry: "Fintech",
-    location: "Accra",
-    contact: "Rita Asante",
-    internsCount: 2,
-    status: "Active",
-  },
-  {
-    id: 7,
-    name: "Andela",
-    email: "talent@andela.com",
-    industry: "Software",
-    location: "Remote",
-    contact: "Kofi Djan",
-    internsCount: 3,
-    status: "Active",
-  },
-];
+const initialCompanies = industrySupervisors.map((sup) => ({
+  id: sup.id,
+  name: sup.company,
+  email: sup.companyEmail || sup.email,
+  industry: sup.industry || "Technology",
+  location: sup.location || "Accra",
+  contact: sup.name,
+  internsCount: sup.studentsCount,
+  status: sup.status,
+}));
 
 export default function CompanyManagement() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -187,7 +126,7 @@ export default function CompanyManagement() {
     },
     {
       field: "actions",
-      headerName: "Status", // Note: The header name for the last column says Status in the screenshot but holds the View link. Let's match it!
+      headerName: "Status",
       width: 100,
       sortable: false,
       renderCell: () => (

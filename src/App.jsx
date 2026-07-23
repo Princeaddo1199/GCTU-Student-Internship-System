@@ -43,6 +43,7 @@ import AcademicSupervisors from "./Pages/Administrator/Pages/AcademicSupervisors
 import AssignSupervisors from "./Pages/Administrator/Pages/AssignSupervisors";
 import SupervisorPerformance from "./Pages/Administrator/Pages/SupervisorPerformance";
 import IndustrySupervisors from "./Pages/Administrator/Pages/IndustrySupervisors";
+import CompanyManagement from "./Pages/Administrator/Pages/CompanyManagement";
 
 function MainLayout({ children }) {
   return (
@@ -449,6 +450,17 @@ function App() {
           </RequireAuth>
         }
       />
+      <Route
+        path="/admin-organizations"
+        element={
+          <RequireAuth allowedRoles={["Administrator"]}>
+            <AdminLayout>
+              <CompanyManagement />
+            </AdminLayout>
+          </RequireAuth>
+        }
+      />
+
 
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
