@@ -253,9 +253,9 @@
 
 /* Status Badges */
 .statusBadgeActive {
-  background-color: #1e293b;
+  background-color: #0d0abe;
   color: #fff;
-  padding: 4px 14px;
+  padding: 1px 14px;
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;

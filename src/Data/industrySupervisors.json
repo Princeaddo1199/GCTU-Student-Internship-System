@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Michael Osei",
+    "initials": "MO",
+    "email": "m.osei@techcorp.com",
+    "company": "TechCorp Ghana",
+    "phone": "+233 20 111 2222",
+    "studentsCount": 3,
+    "status": "Active",
+    "avatarBg": "bg3"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Mensah",
+    "initials": "SM",
+    "email": "s.mensah@dataflow.com",
+    "company": "DataFlow Inc.",
+    "phone": "+233 20 333 4444",
+    "studentsCount": 2,
+    "status": "Active",
+    "avatarBg": "bg2"
+  },
+  {
+    "id": 3,
+    "name": "Grace Appiah",
+    "initials": "GA",
+    "email": "g.appiah@mtn.com",
+    "company": "MTN Group",
+    "phone": "+233 20 555 6666",
+    "studentsCount": 4,
+    "status": "Active",
+    "avatarBg": "bg1"
+  },
+  {
+    "id": 4,
+    "name": "Peter Yeboah",
+    "initials": "PY",
+    "email": "p.yeboah@vodafone.com",
+    "company": "Vodafone Ghana",
+    "phone": "+233 20 777 8888",
+    "studentsCount": 0,
+    "status": "Inactive",
+    "avatarBg": "bg4"
+  },
+  {
+    "id": 5,
+    "name": "Rita Asante",
+    "initials": "RA",
+    "email": "r.asante@hubtel.com",
+    "company": "Hubtel",
+    "phone": "+233 20 999 0000",
+    "studentsCount": 2,
+    "status": "Active",
+    "avatarBg": "bg5"
+  }
+]

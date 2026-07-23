@@ -371,11 +371,11 @@
 
 /* Status Badges */
 .smStatusBadge {
-  padding: 4px 14px;
+  padding: 5px 14px;
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
-  display: inline-block;
+  display: inline;
   text-align: center;
 }
 
@@ -390,7 +390,7 @@
 }
 
 .smStatusBadge.atRisk {
-  background-color: #fef2f2;
+  background-color: #f4f2fe;
   color: #ef4444;
 }
 

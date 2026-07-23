@@ -12,64 +12,7 @@ import {
 } from "lucide-react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Box } from "@mui/material";
-
-const initialSupervisors = [
-  {
-    id: 1,
-    name: "Michael Osei",
-    initials: "MO",
-    email: "m.osei@techcorp.com",
-    company: "TechCorp Ghana",
-    phone: "+233 20 111 2222",
-    studentsCount: 3,
-    status: "Active",
-    avatarBg: "bg3",
-  },
-  {
-    id: 2,
-    name: "Sarah Mensah",
-    initials: "SM",
-    email: "s.mensah@dataflow.com",
-    company: "DataFlow Inc.",
-    phone: "+233 20 333 4444",
-    studentsCount: 2,
-    status: "Active",
-    avatarBg: "bg2",
-  },
-  {
-    id: 3,
-    name: "Grace Appiah",
-    initials: "GA",
-    email: "g.appiah@mtn.com",
-    company: "MTN Group",
-    phone: "+233 20 555 6666",
-    studentsCount: 4,
-    status: "Active",
-    avatarBg: "bg1",
-  },
-  {
-    id: 4,
-    name: "Peter Yeboah",
-    initials: "PY",
-    email: "p.yeboah@vodafone.com",
-    company: "Vodafone Ghana",
-    phone: "+233 20 777 8888",
-    studentsCount: 0,
-    status: "Inactive",
-    avatarBg: "bg4",
-  },
-  {
-    id: 5,
-    name: "Rita Asante",
-    initials: "RA",
-    email: "r.asante@hubtel.com",
-    company: "Hubtel",
-    phone: "+233 20 999 0000",
-    studentsCount: 2,
-    status: "Active",
-    avatarBg: "bg5",
-  },
-];
+import industrySupervisors from "../../../Data/industrySupervisors.json";
 
 export default function IndustrySupervisors() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -78,7 +21,7 @@ export default function IndustrySupervisors() {
     setSearchTerm(e.target.value);
   };
 
-  const filteredData = initialSupervisors.filter((sup) => {
+  const filteredData = industrySupervisors.filter((sup) => {
     const term = searchTerm.toLowerCase();
     return (
       sup.name.toLowerCase().includes(term) ||
@@ -89,9 +32,14 @@ export default function IndustrySupervisors() {
   });
 
   // Calculations for Stat Cards
-  const totalSupervisors = initialSupervisors.length;
-  const activeSupervisors = initialSupervisors.filter((s) => s.status === "Active").length;
-  const totalStudentsSupervised = initialSupervisors.reduce((acc, curr) => acc + curr.studentsCount, 0);
+  const totalSupervisors = industrySupervisors.length;
+  const activeSupervisors = industrySupervisors.filter(
+    (s) => s.status === "Active",
+  ).length;
+  const totalStudentsSupervised = industrySupervisors.reduce(
+    (acc, curr) => acc + curr.studentsCount,
+    0,
+  );
 
   const columns = [
     {

@@ -42,6 +42,7 @@ import StudentManagement from "./Pages/Administrator/Pages/StudentManagement";
 import AcademicSupervisors from "./Pages/Administrator/Pages/AcademicSupervisors";
 import AssignSupervisors from "./Pages/Administrator/Pages/AssignSupervisors";
 import SupervisorPerformance from "./Pages/Administrator/Pages/SupervisorPerformance";
+import IndustrySupervisors from "./Pages/Administrator/Pages/IndustrySupervisors";
 
 function MainLayout({ children }) {
   return (
@@ -434,6 +435,16 @@ function App() {
           <RequireAuth allowedRoles={["Administrator"]}>
             <AdminLayout>
               <SupervisorPerformance />
+            </AdminLayout>
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/admin-industry-supervisors"
+        element={
+          <RequireAuth allowedRoles={["Administrator"]}>
+            <AdminLayout>
+              <IndustrySupervisors />
             </AdminLayout>
           </RequireAuth>
         }
